@@ -1,0 +1,797 @@
+.container-fluid {
+  background:transparent;
+  background-image:none;
+  border-color:transparent;
+  box-shadow:none;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.5);
+}
+
+#nav-icon {
+  font-size: 1.5em; 
+  padding: 10px;
+}
+
+body {
+  background: linear-gradient(to bottom, #123656, #000000);
+  background-color: #0b2337 !important;
+  scroll-behavior: smooth;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  transition: background-image 0.5s ease-in-out;
+  background-attachment: fixed;
+  z-index: 1;
+  margin: auto;
+  height: auto;
+  height: 100%;
+  width: 100%;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+footer {
+  font-size: .70em;
+	font-style: italic;
+	text-align: center;
+	padding: 1em;
+	background:transparent;
+  background-image:none;
+  border-color:transparent;
+  box-shadow:none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  color: white;
+  z-index: 3;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+  nav {
+    font-size: 16px;
+  }
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;  
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.pageHeader {
+  text-align: center; 
+  margin-top: 100px; 
+  z-index:1;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  filter: drop-shadow(5px 5px black);
+  }
+
+.background-image {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.card-1 {
+  margin: auto;
+  display: block;
+  width: 65%;
+}
+
+.card-2 {
+  margin: auto;
+  display: block;
+  width: 65%;
+}
+
+.card-img-top-1, .card-img-top-2 {
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+  width: 60%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top-1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer; 
+}
+
+.card-img-top-2:hover {
+  transform: scale(1.05);
+  cursor: pointer; 
+}
+
+.col-1 {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-image: none;
+  background-size: cover;
+  transition: background-image 0.5s ease;
+}
+
+.col-1 img {
+  transition: transform 0.3s ease;
+}
+
+.col-1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 rgba(0, 0, 0, 0.5);
+}
+
+.col-1:hover img {
+  transform: scale(1.1);
+}
+
+.col-1:hover::before {
+  opacity: 1;
+}
+
+.col-1:hover::after {
+  opacity: 1;
+}
+
+.page {
+  display: none; 
+}
+
+.page.active {
+  display: block;
+}
+
+.pagination-1 {
+  position: fixed;
+  width: 100%;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer; 
+}
+
+.pagination .page-link {
+  border: none;
+}
+
+.pagination-1 .page-link {
+  border: none;
+}
+
+.pagination .page-item.active .page-link {
+  border: 1px solid white; 
+  background-color: transparent; 
+}
+
+.background-image-about {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/68631c017d2ae084e18280d5_1521787322_WB0043-5.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+}
+
+.background-image-ezio-collection {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/images/y6xeIrIb1yNvaeUMhW1xeTOa.avif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+}
+
+.background-image-return-to-arkham {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/images/uZRKxtYmR20dl372YaOmJDdW.avif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+}
+
+.background-image-pwaa-trilogy {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/images/Courtroom_No._5.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-first-turnabout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/first-turnabout.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-turnabout-sisters {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/turnabout-sisters.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.nav-tabs .nav-link {
+  color: #ffffff !important; 
+}
+
+.nav-tabs .nav-link.active {
+  color: #000000 !important; 
+  background-color:#ffffff !important; 
+}
+
+.background-image-turnabout-samurai {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/turnabout-samurai.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-turnabout-goodbyes {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/turnabout-goodbyes.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-rise-from-the-ashes {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/rise-from-the-ashes.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-lost-turnabout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/the-lost-turnabout.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-reunion-and-turnabout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/reunion-and-turnabout.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-turnabout-big-top {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/turnabout-big-top.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-farewell-my-turnabout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/farewell-my-turnabout.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-turnabout-memories {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/turnabout-memories.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-stolen-turnabout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/the-stolen-turnabout.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-recipe-for-turnabout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/recipe-for-turnabout.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-turnabout-beginnings {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/turnabout-beginnings.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-bridge-to-the-turnabout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/pwaat/images/bridge-to-the-turnabout.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  z-index: -999;  
+  filter: blur(5px);
+}
+
+.background-image-gta-3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/gta/images/FA9vZKgUcA0Bs3J.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.content-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.content-link:hover {
+  text-decoration: underline;
+}
+
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 50px;
+  right: 50px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #212529; 
+  color: white; 
+  cursor: pointer; 
+  padding: 30px; 
+  border-radius: 10px; 
+  font-size: 40px; 
+}
+
+#myBtn:hover {
+  background-color: #555; 
+}
+
+.left, .right {
+  float: left;
+  flex: 1; 
+  min-width: 0; 
+}
+
+.totalPercent {
+  float: right;
+  margin-right: 175px;
+  margin-left: auto;
+  width: 125px;
+  height: auto;
+}
+
+.table-1-1 th, .table-1-1 td {
+  padding: 10px; 
+}
+
+.modal-wrapper {
+  z-index: 1060; 
+  position: absolute;
+}
+
+.Pricedown {
+  font-family: 'Pricedown Black', sans-serif;
+  font-size: 20px;
+  -webkit-text-stroke: 1px #000000;
+  text-stroke: 1px #000000;
+}
+
+.Pricedown-1 {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 20px;
+  -webkit-text-stroke: 1px #000000;
+  text-stroke: 1px #000000;
+}
+
+.text-1 {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.missionHeader {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 2.5em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #b59753;
+  text-align: center;
+}
+
+.objectives {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900px;
+  font-size: 1.1em;
+  color: #2f472c;
+  filter: brightness(2);
+  -webkit-text-stroke: 0.9px #000000;
+  text-stroke: 0.9px #000000;
+}
+
+.objectives2 {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900px;
+  font-size: 1.1em;
+  color: #ffffff;
+  -webkit-text-stroke: 0.9px #000000;
+  text-stroke: 0.9px #000000;
+}
+
+.objectives3 {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 1.1em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #b59753;
+  text-align: center;
+}
+
+.rampage {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 1.1em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.background-image-gta-vc {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/gta/images/FA9vZKeVEAYmgXT.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.missionHeader-1 {
+  font-family: 'Rage Italic', sans-serif;
+  font-size: 3em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #d9d117;
+  text-align: center;
+}
+
+.objectives-1 {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900px;
+  font-size: 1.1em;
+  color: #d4a4d7;
+  -webkit-text-stroke: 0.9px #000000;
+  text-stroke: 0.9px #000000;
+}
+
+.objectives-1-1 {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 1.1em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #63c2f8;
+  text-align: center;
+}
+
+.missionHeader-1-1 {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 2.5em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #f494da;
+  text-align: center;
+}
+
+.background-image-gta-sa {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/gta/images/Screenshot\ 2025-03-12\ 000951.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.missionHeader-2 {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 3em;
+  -webkit-text-stroke: 1.3px #000000;
+  text-stroke: 1.3px #000000;
+  color: #b5812b;
+  text-align: center;
+}
+
+.objectives-2-1 {
+  font-family: 'Pricedown', sans-serif;
+  font-size: 1.1em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #90a97f;
+  text-align: center;
+}
+
+.background-image-gta-4 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/gta/images/background-image-gta-4.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-gta-5 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/gta/images/IMG_9915.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.objectives4 {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 1.2em;
+  color: #ffffff;
+  -webkit-text-stroke: 0.8px #000000;
+}
+
+.missionHeader-3 {
+  font-family: 'Helvetica Compressed', sans-serif;
+  font-size: 3em;
+  -webkit-text-stroke: 1.3px #000000;
+  text-stroke: 1.3px #000000;
+  color: #4d5050;
+  text-align: center;
+  filter: brightness(1.4);
+}
+
+.missionHeader-3-1 {
+  font-family: 'Mesquite Std', sans-serif;
+  font-size: 4em;
+  -webkit-text-stroke: 1.3px #000000;
+  text-stroke: 1.3px #000000;
+  color: #4d5050;
+  text-align: center;
+  filter: brightness(1.4);
+}
+
+.missionHeader-3-2 {
+  font-family: 'HelveticaRounded LT Std BdCn', sans-serif;
+  font-size: 3em;
+  -webkit-text-stroke: 1.3px #000000;
+  text-stroke: 1.3px #000000;
+  color: #600f5b;
+  text-align: center;
+  filter: brightness(1.4);
+}
+
+.objectives5 {
+  font-family: 'Chalet LondonNineteenSixty', sans-serif;
+  font-size: 1.2em;
+  -webkit-text-stroke: 0.2px #000000;
+  color: #ffffff;
+}
+
+.missionHeader-4 {
+  font-family: 'SignPainter', sans-serif;
+  font-size: 3em;
+  -webkit-text-stroke: 0.3px #000000;
+  text-stroke: 0.3px #000000;
+  text-align: center;
+}
+
+.SignPainter {
+  font-family: 'SignPainter', sans-serif;
+  font-size: 25px;
+}
+
+.PricedownCost {
+  font-family: 'Pricedown Black', sans-serif;
+  font-size: 20px;
+  -webkit-text-stroke: 1px #000000;
+  text-stroke: 1px #000000;
+  color: #e45a5b;
+}
+
+.smuggling-table td {
+  color: #000000;
+}
+
+.background-image-gta-6 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/gta/images/Jason_and_Lucia_Motel_landscape.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-gta-online {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/gta/images/IMG_9652\(1\).jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-ac-shadows {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/assassins-creed/images/Assassin\'s\ Creed®\ Shadows_20250520010622.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-ac-origins {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/assassins-creed/images/assassin_creed_origins_wallpaper_final.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-ac-odyssey {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/assassins-creed/images/assassins_creed_odyssey_wallpaper.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-ac-valhalla {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/assassins-creed/images/resized_valhalla_wallpaper.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-mafia-3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/mafia/images/IMG_0365.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}

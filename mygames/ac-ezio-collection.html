@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Assassin's Creed: The Ezio Collection </title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon_io/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon_io/site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="../mystyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+  <body class="background-image-ezio-collection">
+
+   <div class="content">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/channels4_profile-modified.png" alt="Logo" width="50" height="auto" class="d-inline-block align-text-top">
+        </a>   
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto" style="padding-left: 1600px;">
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html"><i id="nav-icon" class="bi bi-person-square"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../myshows.html"><i id="nav-icon" class="bi bi-tv"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../mygames.html"> <i id="nav-icon" class="bi bi-joystick"></i> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../mymovies.html"><i id="nav-icon" class="bi bi-film"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      <h2 class="pageHeader" id="pageHeader"> Assassin's Creed: The Ezio Collection </h2>
+
+      <script>
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+     </script>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 row-1">
+            <div class="col-1">
+                <a href="../mygames/assassins-creed/ac-2.html"> <img src="images/image-1.jpg" class="card-img-top-1" id="hoverElement" alt="..."> </a>
+            </div>
+            <div class="col-1">
+                <a href="../mygames/assassins-creed/ac-brotherhood.html"> <img src="images/brotherhood.png" class="card-img-top-1"  id="hideElement" alt="..."> </a>
+            </div>
+            <div class="col-1">
+                <a href="../mygames/assassins-creed/ac-revelations.html"> <img src="images/revelations.png" class="card-img-top-1"  id="hideElement2" alt="..."> </a>
+            </div>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const hoverElement = document.getElementById('hoverElement');
+            const hideElement = document.getElementById('hideElement');
+            const hideElement2 = document.getElementById('hideElement2');
+      
+            hoverElement.addEventListener('mouseover', () => {
+                document.body.style.backgroundImage = "url('images/109611.jpg')";
+                hideElement.style.display = 'none';
+                hideElement2.style.display = 'none';
+            });
+
+            hoverElement.addEventListener('mouseout', () => {
+                document.body.style.backgroundImage = "";
+                hideElement.style.display = 'block';
+                hideElement2.style.display = 'block';
+            });
+
+            hideElement.addEventListener('mouseover', () => {
+                document.body.style.backgroundImage = "url('images/Assassin_Creed_Brotherhood_Wallpaper_09_1366x768.jpg')";
+                hoverElement.style.display = 'none';
+                hideElement2.style.display = 'none';
+            });
+
+            hideElement.addEventListener('mouseout', () => {
+                document.body.style.backgroundImage = "";
+                hoverElement.style.display = 'block';
+                hideElement2.style.display = 'block';
+            });
+
+            hideElement2.addEventListener('mouseover', () => {
+                document.body.style.backgroundImage = "url('images/1371829.jpeg')";
+                hoverElement.style.display = 'none';
+                hideElement.style.display = 'none';
+            });
+
+            hideElement2.addEventListener('mouseout', () => {
+                document.body.style.backgroundImage = "";
+                hoverElement.style.display = 'block';
+                hideElement.style.display = 'block';
+            });
+
+          });
+      </script>
+
+  </div>
+
+   <footer>
+    Copyright &copy; 2024 navytrademark <br> 
+   </footer>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  </body>
+
+</html>
