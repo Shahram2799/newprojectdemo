@@ -3,7 +3,7 @@ HTML Project
 This project was created for the purpose of showcasing different multimedia content as part of a Portfolio website of some sort such as Video Game Walkthroughs for specific games, Television Show and Film Guides for specific shows and films as well. 
 The technology leveraged that was used to conduct this project was HTML, CSS and Javascript Programming while also using the Bootstrap Framework, all programmed through the Microsoft Visual Code platform. 
 
-This project begins by first including an Index page with links to each type of multimedia content in the main navbar, as well as an About page. Under each nav link, you can see the different games, television shows and films that are showcased. As of this moment, mostly only video game walkthroughs exist for a few games. 
+This project begins by first including an Index page with links to each type of multimedia content in the main navbar, as well as an About page. Under each nav link, you can see the different games, television shows and films that are showcased. As of this moment, mostly only video game walkthroughs exist for a few games (The only fully completed games are Grand Theft Auto, The Last of Us, and the Ace Attorney Trilogy... I am currently working on Assassin's Creed). 
 
 This project is ongoing as I am continuously updating and improving it on a time to time basis. I am open to any suggestions and/or comments on any fixes or additions I can make to the webpage.  
 
