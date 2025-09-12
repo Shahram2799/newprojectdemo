@@ -30,7 +30,6 @@ body {
   width: 100%;
 }
 
-
 body.loaded {
   opacity: 1;
 }
@@ -44,7 +43,7 @@ body.loaded {
   margin-right: 20px;
 }
 
-.content-1, .content-2 {
+.content-1, .content-2, .content-3 {
   height: 50vh;
   position: absolute;
   left: 0;
@@ -79,6 +78,16 @@ footer {
   font-family: 'Roboto', sans-serif;
   font-size: 15em;
   filter: drop-shadow(5px 5px black);
+}
+
+.tagline {
+  margin-top: 100px; 
+  z-index:1;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  filter: drop-shadow(5px 5px black);
+  text-align: center;
 }
 
 .carousel-caption-overlay {
@@ -301,6 +310,18 @@ section.exit-right {
 .pagination .page-item.active .page-link {
   border: 1px solid white; 
   background-color: transparent; 
+}
+
+.background-image-index {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/68631c017d2ae084e18280d5_1521787322_WB0043-5-bat-signal.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
 }
 
 .background-image-about {
@@ -537,7 +558,7 @@ section.exit-right {
   filter: blur(5px);
 }
 
-.content-link {
+.content-link, .content-link-2 {
   color: #ffffff;
   text-decoration: none;
 }
