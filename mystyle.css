@@ -830,6 +830,13 @@ footer {
   margin-left: 5px; 
 }
 
+.rectangle{
+  width: 7px;
+  height: 15px; 
+  background: #36d2ff; 
+  display: inline-block;
+}
+
 .diamond-1{
   width: 15px;
   height: 15px; 
