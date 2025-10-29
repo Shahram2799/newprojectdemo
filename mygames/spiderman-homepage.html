@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Marvel's Spider-Man </title>
+  <title> Mafia </title>
   <link rel="icon" type="image/x-icon" href="../images/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
@@ -49,7 +49,7 @@
         </div>
       </nav>
 
-      <h2 class="pageHeader" id="pageHeader"> Marvel's Spider-Man </h2>
+      <h2 class="pageHeader" id="pageHeader"> Insomniac Marvel's Franchise </h2>
 
       <script>
         function navigateTo(pageId) {
@@ -57,6 +57,8 @@
             document.getElementById(pageId).classList.add('active');
         }
      </script>
+
+      <div id="page1" class="page active">
 
         <div class="row row-cols-1 row-cols-md-3 g-4 row-1">
             <div class="col-1">
@@ -69,6 +71,18 @@
                 <a href="spiderman-2.html"> <img src="images/IMG_8223.png" class="card-img-top-1"  id="hideElement2" alt="..."> </a>
             </div>
         </div>
+
+        <nav aria-label="Page navigation example" id="pagination">
+          <ul class="pagination justify-content-center pagination-1">
+            <li class="page-item active" aria-current="page">
+              <span class="page-link bg-dark text-light" onclick="navigateTo('page1')">1</span>
+            </li>  
+            <li class="page-item bg-dark"><a class="page-link bg-dark text-light" onclick="navigateTo('page2')">2</a></li>
+            <li class="page-item bg-dark">
+              <a class="page-link bg-dark text-light" onclick="navigateTo('page2')">Next</a>
+            </li>
+          </ul>
+        </nav>
 
         <script>
           document.addEventListener('DOMContentLoaded', () => {
@@ -121,6 +135,54 @@
 
           });
       </script>
+
+      </div>
+
+      <div id="page2" class="page">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 row-1" style="margin-top: 100px; margin-bottom: 100px;">
+            <div class="col-1" style="margin-left: auto; margin-right: auto; display: block;">
+                <a href="../mygames/marvel/marvels-wolverine.html"> <img src="images/marvelswolverine_lob_log_def_02.png" class="card-img-top-1" id="hoverElement-1" alt="..."> </a>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example" id="pagination-2">
+          <ul class="pagination justify-content-center pagination-1">
+            <li class="page-item bg-dark">
+              <span class="page-link bg-dark text-light" onclick="navigateTo('page1')">Previous</span>
+            </li>      
+            <li class="page-item bg-dark"><a class="page-link bg-dark text-light" onclick="navigateTo('page1')">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <span class="page-link bg-dark text-light" onclick="navigateTo('page2')">2</span>
+            </li>      
+          </ul>
+        </nav>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const hoverElement = document.getElementById('hoverElement-1');
+            const hideElement = document.getElementById('hideElement-1');
+            const hideElement2 = document.getElementById('hideElement2-1');
+            const pagination = document.getElementById('pagination-2');
+      
+            hoverElement.addEventListener('mouseover', () => {
+                document.body.style.backgroundImage = "url('images/0f8097282863ccd07abf4485a2bc733111127e628552207e.avif')";
+                hideElement.style.display = 'none';
+                hideElement2.style.display = 'none';
+                pagination.style.display = 'none'; 
+            });
+
+            hoverElement.addEventListener('mouseout', () => {
+                document.body.style.backgroundImage = "";
+                hideElement.style.display = 'block';
+                hideElement2.style.display = 'block';
+                pagination.style.display = 'block'; 
+            });
+
+          });
+      </script>
+
+      </div>
 
   </div>
 

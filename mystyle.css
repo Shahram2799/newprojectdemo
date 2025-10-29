@@ -928,3 +928,51 @@ footer {
   background-position: center;
   filter: blur(5px);
 }
+
+.background-image-rdr-1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/rdr/images/red_dead_redemption_2_cowboy_western_video_game-wallpaper-3840x2160.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-rdr-2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('mygames/rdr/images/749807.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-dexter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('myshows/images/791186-beautiful-dexter-wallpapers-3840x2160.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-dexter-1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('myshows/dexter/images/1083323-drawing-painting-white-red-Dexter-Dexter-Morgan-Michael-C-Hall-ART-color-hand-Sense-sketch.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
