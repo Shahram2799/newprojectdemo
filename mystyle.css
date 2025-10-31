@@ -969,7 +969,43 @@ footer {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('myshows/dexter/images/1083323-drawing-painting-white-red-Dexter-Dexter-Morgan-Michael-C-Hall-ART-color-hand-Sense-sketch.jpg');
+  background-image: url('myshows/dexter/images/ssg6te9xyhl61.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-dexter-new-blood {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('myshows/dexter/images/dexter-new-blood-tv-series-2021-series-dexter-morgan-2560x1440-6820.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-dexter-original-sin {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('myshows/dexter/images/1387130.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+
+.background-image-dexter-resurrection {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('myshows/dexter/images/dexter-resurrection-2880x1800-23207.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
