@@ -93,6 +93,757 @@
         </div>
      </div>
 
+   <div class="card-container">
+
+      <div class="card bg-dark" id="card1" style="width: 70rem; display: block; margin-left: auto; margin-right: auto; margin-top: 2rem; padding-bottom: 150px;">
+          <div class="card-body" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-style: normal;">
+              <div class="card-header">
+                  <h2 style="font-family: 'RDR Lino', sans-serif;"> Red Dead Redemption 100% Completion Checklist </h2>
+              </div>  
+                <div class="totalPercent" style="position: relative; display: inline-block; padding-top: 15px;">
+                  <canvas id="myPieChart" width="200" height="200"></canvas>
+                <div id="totalPercent" style="font-weight: 900; position: absolute; top: 50%; bottom: 50%; transform: translate(-50%, -50%); margin-left: 62.5px; margin-top: -2.5px; font-size: 15px;"> 100% </div>
+                </div>
+                <div id="checklistProgressBars" class="spanDoubleCol" style="font-family: 'RDR Lino', sans-serif;">
+                  <div class="left">
+                    <ul style="padding-top: 15px; width: 25; list-style-type: none;">
+                            <li class="missions" data-percent="100" data-name="missions" data-totalpct="74.00"> <a class="content-link" href="#missionsandevents"> MISSIONS AND EVENTS </a> <span style="margin-left: 60px;"> 107 / 107 </span> 
+                                <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar w-100" style="background-color: #ca0614 !important; "> </div>
+                                </div>
+                            </li>
+                            <li class="collectibles" style="padding-top: 15px;" data-percent="100" data-name="collectibles" data-totalpct="8.00"> <a class="content-link" href="#ambientchallenges"> AMBIENT CHALLENGES </a> <span style="margin-left: 90px;"> 4 / 4 </span> 
+                                <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar w-100"  style="background-color: #e3e3e3 !important; "> </div>
+                                </div>
+                            </li>   
+                    </ul>
+                  </div>
+                  <div class="right">
+                    <ul style="width: 25; list-style-type: none;">               
+                        <li class="misc" style="padding-top: 15px;" data-percent="100" data-name="misc" data-totalpct="18.00"> <a class="content-link" href="#misc"> MISCELLANEOUS </a> <span style="margin-left: 105px;"> 5 / 5 </span> 
+                            <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar w-100" style="background-color: #0c0002 !important; "> </div>
+                            </div>
+                        </li>
+                        <li style="padding-top: 15px; margin-bottom: 15px;"> <a class="content-link" href="#achievements-and-trophies"> ACHIEVEMENTS AND TROPHIES </a>  </li>
+                    </ul>
+                  </div>
+              </div>                
+              <button class="btn btn-dark btn-outline-light" onclick="switchCard()" style="position: absolute; bottom: 10px; right: 10px;">Undead Nightmare</button>
+              <script>
+                  var labels = ['STORY', 'SIDE MISSIONS', 'MISCELLANEOUS'];
+                  const elements = document.querySelectorAll("[data-totalpct]");
+                  const data = Array.from(elements).map((el) => parseFloat(el.getAttribute("data-totalpct")));
+                  var data2 =data;
+                  var ctx = document.getElementById('myPieChart').getContext('2d');
+                  var myPieChart3= new Chart(ctx, {
+                  type: 'doughnut',
+                  data: {
+                      datasets: [{
+                      data: data2,
+                      backgroundColor: [
+                          '#d80419', // Story Missions color
+                          '#e3e3e3', // Side Missions color
+                          '#0c0002', //Miscellaneous color
+                      ],
+                      borderWidth: 0
+                      }]
+                  },
+                  options: {
+                      responsive: true,
+                      plugins: {
+                      legend: {
+                          display: false,
+                      },
+                      tooltip: {
+                          enabled: false,
+                      },
+                      },
+                  }
+                  });
+              </script>      
+          </div>
+      </div>
+
+      <div class="card bg-dark d-none" id="card2" style="width: 70rem; display: block; margin-left: auto; margin-right: auto; margin-top: 2rem; padding-bottom: 150px;">
+        <div class="card-body" style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-style: normal;">
+            <div class="card-header">
+                <h2 style="font-family: 'RDR Lino', sans-serif;"> Undead Nightmare 100% Completion Checklist </h2>
+            </div>  
+            <div class="totalPercent" style="position: relative; display: inline-block; padding-top: 15px;">
+                <canvas id="myPieChart2" width="100" height="100"></canvas>
+                <div id="totalPercent" style="font-weight: 900; position: absolute; top: 50%; bottom: 50%; transform: translate(-50%, -50%); margin-left: 62.5px; margin-top: -2.5px; font-size: 15px;"> 100% </div>
+            </div>
+            <div id="checklistProgressBars2" class="spanDoubleCol" style="font-family: 'RDR Lino', sans-serif;">
+                <div class="left">
+                <ul style="padding-top: 15px; width: 25; list-style-type: none;">
+                         <li class="missions" data-percent="100" data-name="missions" data-totalpct="60.00"> <a class="content-link" href="#missionsandevents2"> MISSIONS AND EVENTS </a> <span style="margin-left: 70px;"> 55 / 55 </span> 
+                          <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar w-100" style="background-color: #85c114 !important; "> </div>
+                          </div>
+                         </li>
+                        <li class="challenges" data-percent="100" data-name="sidemissions" data-totalpct="16.00" style="padding-top: 15px;"> <a class="content-link" href="#challenges2"> UNDEAD CHALLENGES </a> <span style="margin-left: 90px;"> 4 / 4 </span>
+                            <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar w-100" style="background-color: #e3e3e3 !important; "> </div>
+                            </div>
+                        </li>
+                </ul>
+                </div>
+                <div class="right">
+                <ul style="width: 25; list-style-type: none;">
+                    <li class="misc" style="padding-top: 15px;" data-percent="100" data-name="misc" data-totalpct="24.00"> <a class="content-link" href="#misc2"> MISCELLANEOUS </a> <span style="margin-left: 105px;"> 2 / 2 </span>
+                        <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar w-100" style="background-color: #0c0002 !important; "> </div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>    
+            <button class="btn btn-dark btn-outline-light" onclick="switchCard()" style="position: absolute; bottom: 10px; right: 10px;">Red Dead Redemption</button>
+            <script>
+                var labels = ['STORY', 'SIDE MISSIONS', 'MISCELLANEOUS'];
+                const elements2 = document.querySelectorAll("#checklistProgressBars2 li[data-totalpct]");
+                const data5 = Array.from(elements2).map((el) => parseFloat(el.getAttribute("data-totalpct")));
+                var data3 = data5;
+                var ctx2 = document.getElementById('myPieChart2').getContext('2d');
+                var myPieChart2 = new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                    data: data3,
+                    backgroundColor: [
+                        '#85c114', // Story Missions color
+                        '#e3e3e3', // Side Missions color
+                        '#0c0002', //Miscellaneous color
+                    ],
+                    borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        enabled: false,
+                    },
+                    },
+                }
+                });
+            </script>      
+        </div>
+    </div>
+      <script>
+      let currentCard = 1; // Start at Card 1
+      function switchCard() {
+        document.getElementById(`card${currentCard}`).classList.add("d-none");
+        currentCard = currentCard === 2 ? 1 : currentCard + 1;
+        document.getElementById(`card${currentCard}`).classList.remove("d-none");
+        }
+      </script>
+    </div>  
+
+    <div class="card text-bg-dark mb-3" id="missionsandevents" style="max-width: 90rem; margin-bottom: 100px; margin-left: auto; margin-right: auto; display: block; margin-top: 2rem; font-style: normal;">
+      <div class="card-body">
+        <div class="card-header">
+          <h3 style="font-family: 'RDR Lino', sans-serif;"> Missions and Events </h3>
+        </div>   
+        <p style="padding-top: 15px;"> In Red Dead Redemption there are 107 total missions and events to complete for 100% completion: <a class="content-link" href="#storymissions">57 Story Missions</a>, <a class="content-link" href="#strangers"> 18 Strangers</a>, <a class="content-link" href="#bounties">20 Bounties</a>, <a class="content-link" href="#jobs">5 Jobs</a>, and <a class="content-link" href="#ganghidehouts">7 Gang Hideouts</a>. </p>
+        <hr>
+        <h4 id="storymissions"  style="font-family: 'RDR Lino', sans-serif;"> STORY </h4>
+        <p> Your first task in the 100% Completion of Red Dead Redemption is to complete all 57 Main Story Missions. This also includes the Strangers Mission "Remember My Family" as it brings the story to a close and rolls the end credits. </p>
+        <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Story Missions </h5>        
+        <table class="table-1-1" style="border-collapse: collapse;">
+          <tr> <th style="text-align: center;"> Setting </th><th> </th> <th> Mission </th> <th> </th> <th style="text-align: center;"> Given By </th> <th style="text-align: center;"> Gold Medal Objectives </th>  <th> </th> <th> </th> </tr>
+          <tr> <td style="text-align: center;"> New Austin </td><td> 1 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission01"> Exodus in America </a> </td> <td  style="text-align: center;"> - </td> <td  style="text-align: center;"> - </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 4:15 </td> <td style="text-align: right; padding-left: 165px;"> <img src="images/achievements/that-government-boy.png" width="30px" height="auto"> <b> That Government Boy</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> </td><td> 2 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission02"> New Friends, Old Problems </a> </td> <td  style="text-align: center;"> - </td> <td  style="text-align: center;"> - </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy </td> <td style="text-align: right;"> 6:30 <br> 100% </td> </tr>
+          <tr> <td> </td><td> 3 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission03"> Obstacles in Our Path </a> </td> <td  style="text-align: center;"> <img src="images/bonnie-mcfarlane-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Bonnie MacFarlane </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 3:05 </td> </tr>
+          <tr> <td> </td><td> 4 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission04"> This Is Armadillo, USA </a> </td> <td  style="text-align: center;"> <img src="images/bonnie-mcfarlane-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Bonnie MacFarlane </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 3:25 </td> </tr>
+          <tr> <td> </td><td> 5 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission05"> Women and Cattle </a> </td> <td  style="text-align: center;"> <img src="images/bonnie-mcfarlane-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Bonnie MacFarlane </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 2:50 </td> </tr>
+          <tr> <td> </td><td> 6 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission06"> Wild Horses, Tamed Passions </a> </td> <td  style="text-align: center;"> <img src="images/bonnie-mcfarlane-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Bonnie MacFarlane </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 10:00 </td> </tr>
+          <tr> <td> </td><td> 7 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission07"> A Tempest Looms </a> </td> <td  style="text-align: center;"> <img src="images/bonnie-mcfarlane-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Bonnie MacFarlane </td> <td style="text-align: left;"> Fastest Time <br> Stragglers Returned <br> Number of Cows Herded </td> <td style="text-align: right;"> 5:05 <br> 100% <br> 21 </td> </tr>
+          <tr> <td> </td><td> 8 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission08"> Political Realities in Armadillo </a> </td> <td  style="text-align: center;"> <img src="images/marshall-johnson-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Marshall Johnson </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 2:35 <br> 100% <br> 5 </td> </tr>
+          <tr> <td> </td><td> 9 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission09"> Justice in Pike's Basin </a> </td> <td  style="text-align: center;"> <img src="images/marshall-johnson-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Marshall Johnson </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 6:20 <br> 100% <br> 10 </td> </tr>
+          <tr> <td> </td><td> 10 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission10"> Old Swindler Blues </a> </td> <td  style="text-align: center;"> <img src="images/nigel-west-dickens-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Nigel West Dickens </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 2:20 <br> 100% <br> 4 </td> </tr>
+          <tr> <td> </td><td> 11 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission11"> Spare the Rod, Spoil the Bandit </a> </td> <td  style="text-align: center;"> <img src="images/marshall-johnson-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Marshall Johnson </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 6:50 <br> 60% <br> 15 </td> </tr>
+          <tr> <td> </td><td> 12 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission12"> The Burning </a> </td> <td  style="text-align: center;"> <img src="images/bonnie-mcfarlane-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Bonnie MacFarlane </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 4:35 </td> </tr>
+          <tr> <td> </td><td> 13 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission13"> Hanging Bonnie McFarlane </a> </td> <td  style="text-align: center;"> <img src="images/marshall-johnson-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Marshall Johnson </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 6:15 <br> 88% <br> 7 </td> </tr>
+          <tr> <td> </td><td> 14 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission14"> You Shall Not Give False Testimony, Except for Profit </a> </td> <td  style="text-align: center;"> <img src="images/nigel-west-dickens-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Nigel West Dickens </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 3:39 </td> </tr>
+          <tr> <td> </td><td> 15 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission15"> Exhuming and Other Fine Hobbies </a> </td> <td  style="text-align: center;"> <img src="images/seth-icon.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Seth </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 6:00 </td> </tr>
+          <tr> <td> </td><td> 16 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission16"> A Gentle Drive with Friends </a> </td> <td  style="text-align: center;"> <img src="images/seth-icon.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Seth </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 3:15 <br> 100% <br> 7 </td> </tr>
+          <tr> <td> </td><td> 17 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission17"> Let the Dead Bury Their Dead </a> </td> <td  style="text-align: center;"> <img src="images/seth-icon.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Seth </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 2:10 <br> 80% <br> 14 </td> </tr>
+          <tr> <td> </td><td> 18 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission18"> Liars, Cheats and Other Proud Americans </a> </td> <td  style="text-align: center;"> <img src="images/nigel-west-dickens-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Nigel West Dickens </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 4:40 </td> </tr>
+          <tr> <td> </td><td> 19 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission19"> A Frenchman, a Welshman and an Irishman </a> </td> <td  style="text-align: center;"> <img src="images/irish-icon.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Irish </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 2:10 <br> 100% <br> 9 </td> </tr>
+          <tr> <td> </td><td> 20 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission20"> Man is Born Unto Trouble </a> </td> <td  style="text-align: center;"> <img src="images/irish-icon.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Irish </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 6:25 <br> 83% <br> 18 </td> </tr>
+          <tr> <td> </td><td> 21 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission21"> On Shaky's Ground </a> </td> <td  style="text-align: center;"> <img src="images/irish-icon.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Irish </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 7:55 <br> 85% <br> 7 </td> </tr>
+          <tr> <td> </td><td> 22 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission22"> Can a Swindler Change His Spots? </a> </td> <td  style="text-align: center;"> <img src="images/nigel-west-dickens-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Nigel West Dickens </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 5:35 <br> 85% <br> 12 </td> </tr>
+          <tr> <td> </td><td> 23 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission23"> The Sport of Kings, and Liars </a> </td> <td  style="text-align: center;"> <img src="images/nigel-west-dickens-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Nigel West Dickens </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 4:55 </td> </tr>
+          <tr> <td> </td><td> 24 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission24"> The Assault on Fort Mercer </a> </td> <td  style="text-align: center;"> <img src="images/marshall-johnson-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Marshall Johnson </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 5:10 <br> 15% <br> 10 </td> <td style="text-align: right;"> <img src="images/achievements/land-of-opportunity.png" width="30px" height="auto"> <b> Land of Opportunity </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> Nuevo Paraiso </td><td> 25 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission25"> We Shall Be Together in Paradise </a> </td> <td  style="text-align: center;"> <img src="images/irish-icon.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Irish </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 8:50 <br> 65% <br> 4 </td> </tr>
+          <tr> <td> </td><td> 26 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission26"> Civilization, at Any Price </a> </td> <td  style="text-align: center;"> <img src="images/de-santa-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> De Santa </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 6:59 <br> 90% <br> 4 </td> </tr>
+          <tr> <td> </td><td> 27 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission27"> The Demon Drink </a> </td> <td  style="text-align: center;"> <img src="images/de-santa-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> De Santa </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 4:10 <br> 70% <br> 3 </td> </tr>
+          <tr> <td> </td><td> 28 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission28"> Empty Promises </a> </td> <td  style="text-align: center;"> <img src="images/de-santa-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> De Santa </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 8:20 <br> 88% <br> 22 </td> </tr>
+          <tr> <td> </td><td> 29 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission29"> Mexican Caesar </a> </td> <td  style="text-align: center;"> <img src="images/de-santa-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> De Santa </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 13:00 <br> 42% <br> 22 </td> </tr>
+          <tr> <td> </td><td> 30 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission30"> The Gunslinger's Tragedy </a> </td> <td  style="text-align: center;"> <img src="images/landon-ricketts-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Landon Ricketts </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 3:35 <br> 75% <br> 5 </td> </tr>
+          <tr> <td> </td><td> 31 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission31"> Landon Ricketts Rides Again </a> </td> <td  style="text-align: center;"> <img src="images/landon-ricketts-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Landon Ricketts </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 9:45 <br> 80% <br> 15 </td> </tr>
+          <tr> <td> </td><td> 32 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission32"> Lucky in Love </a> </td> <td  style="text-align: center;"> <img src="images/landon-ricketts-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Landon Ricketts </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 2:55 <br> 90% <br> 3 </td> </tr>
+          <tr> <td> </td><td> 33 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission33"> The Mexican Wagon Train </a> </td> <td  style="text-align: center;"> <img src="images/landon-ricketts-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Landon Ricketts </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 3:55 <br> 90% <br> 7 </td> </tr>
+          <tr> <td> </td><td> 34 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission34"> My Sister's Keeper </a> </td> <td  style="text-align: center;"> <img src="images/luisa-fortuna-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Luisa Fortuna </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 3:35 <br> 90% <br> 3 </td> </tr>
+          <tr> <td> </td><td> 35 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission35"> Must a Savior Die? </a> </td> <td  style="text-align: center;"> <img src="images/luisa-fortuna-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Luisa Fortuna </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 5:05 <br> 85% <br> 7 </td> </tr>
+          <tr> <td> </td><td> 36 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission36"> Cowards Die Many Times </a> </td> <td  style="text-align: center;"> <img src="images/de-santa-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> De Santa </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 3:05 <br> 90% <br> 8 </td> </tr>
+          <tr> <td> </td><td> 37 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission37"> Father Abraham </a> </td> <td  style="text-align: center;"> <img src="images/luisa-fortuna-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Luisa Fortuna </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 3:30 <br> 75% <br> 4 </td> </tr>
+          <tr> <td> </td><td> 38 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission38"> Captain De Santa's Downfall </a> </td> <td  style="text-align: center;"> <img src="images/luisa-fortuna-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Luisa Fortuna </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 5:40 <br> 75% <br> 4 </td> </tr>
+          <tr> <td> </td><td> 39 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission39"> The Great Mexican Train Robbery </a> </td> <td  style="text-align: center;"> <img src="images/abraham-reyes-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Abraham Reyes </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 9:30 <br> 35% <br> 4 </td> </tr>
+          <tr> <td> </td><td> 40 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission40"> The Gates of El Presidio </a> </td> <td  style="text-align: center;"> <img src="images/abraham-reyes-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Abraham Reyes </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 5:20 <br> 40% <br> 22 </td> <td style="text-align: right;"> <img src="images/achievements/sons-of-mexico.png" width="30px" height="auto"> <b> Sons of Mexico </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> </td><td> 41 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission41"> An Appointed Time </a> </td> <td  style="text-align: center;"> <img src="images/abraham-reyes-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Abraham Reyes </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 8:15 <br> 40% <br> 20 </td> <td style="text-align: right;"> <img src="images/achievements/no-more-fancy-words.png" width="30px" height="auto"> <b> No More Fancy Words </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> West Elizabeth </td><td> 42 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission42"> Bear One Another's Burdens </a> </td> <td  style="text-align: center;"> <img src="images/agent-ross-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Agent Ross </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 7:25 <br> 75% <br> 7 </td> </tr>
+          <tr> <td> </td><td> 43 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission43"> Great Men Are Not Always Wise </a> </td> <td  style="text-align: center;"> <img src="images/agent-ross-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Agent Ross </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 6:40 <br> 75% <br> 10 </td> </tr>
+          <tr> <td> </td><td> 44 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission44"> At Home With Dutch </a> </td> <td  style="text-align: center;"> <img src="images/harold-macdougal-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Harold MacDougal </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 8:30 <br> 75% <br> 3 </td> <td style="text-align: right;"> <img src="images/achievements/a-savage-soul.png" width="30px" height="auto"> <b> A Savage Soul </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> </td><td> 45 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission45"> For Purely Scientific Purposes </a> </td> <td  style="text-align: center;"> <img src="images/harold-macdougal-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Harold MacDougal </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 5:40 <br> 90% <br> 6 </td> </tr>
+          <tr> <td> </td><td> 46 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission46"> The Prodigal Son Returns (To Yale) </a> </td> <td  style="text-align: center;"> <img src="images/harold-macdougal-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Harold MacDougal </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 4:30 <br> 80% <br> 7 </td> </tr>
+          <tr> <td> </td><td> 47 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission47"> And You Will Know the Truth </a> </td> <td  style="text-align: center;"> <img src="images/agent-ross-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Agent Ross </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 4:45 <br> 15% <br> 11 </td> </tr>
+          <tr> <td> </td><td> 48 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission48"> And the Truth Will Set You Free </a> </td> <td  style="text-align: center;"> - </td> <td  style="text-align: center;"> - </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 8:30 <br> 50% <br> 15 </td> <td style="text-align: right;"> <img src="images/achievements/the-benefits-of-civilization.png" width="30px" height="auto"> <b> The Benefits of Civilization </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> Homestead </td><td> 49 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission49"> The Outlaw's Return </a> </td> <td  style="text-align: center;"> <img src="images/abigail-icon-`.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Abigail Marston </td> <td style="text-align: left;"> Fastest Time <br> Stragglers Returned <br> Number of Cows Herded </td> <td style="text-align: right;"> 9:59 <br> 85% <br> 15 </td> </tr>
+          <tr> <td> </td><td> 50 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission50"> Pestilance </a> </td> <td  style="text-align: center;"> <img src="images/abigail-icon-`.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Abigail Marston </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy </td> <td style="text-align: right;"> 1:29 <br> 60% </td> </tr>
+          <tr> <td> </td><td> 51 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission51"> Old Friends, New Problems </a> </td> <td  style="text-align: center;"> <img src="images/abigail-icon-`.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Abigail Marston </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 5:59 </td> </tr>
+          <tr> <td> </td><td> 52 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission52"> By Sweat and Toil </a> </td> <td  style="text-align: center;"> <img src="images/uncle-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Uncle </td> <td style="text-align: left;"> Fastest Time <br> Stragglers Returned <br> Number of Cows Herded </td> <td style="text-align: right;"> 5:20 <br> 85% <br> 15 </td> </tr>
+          <tr> <td> </td><td> 53 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission53"> A Continual Feast </a> </td> <td  style="text-align: center;"> <img src="images/uncle-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Uncle </td> <td style="text-align: left;"> Fastest Time </td> <td style="text-align: right;"> 5:19 </td> </tr>
+          <tr> <td> </td><td> 54 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission54"> John Marston and Son </a> </td> <td  style="text-align: center;"> <img src="images/jack-icon-1.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Jack Marston </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy </td> <td style="text-align: right;"> 7:49 <br> 70% </td> </tr>
+          <tr> <td> </td><td> 55 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission55"> Wolves, Dogs and Sons </a> </td> <td  style="text-align: center;"> <img src="images/jack-icon-1.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Jack Marston </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy </td> <td style="text-align: right;"> 6:29 <br> 95% </td> </tr>
+          <tr> <td> </td><td> 56 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission56"> Spare the Love, Spoil the Child </a> </td> <td  style="text-align: center;"> <img src="images/jack-icon-1.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Jack Marston </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy </td> <td style="text-align: right;"> 5:19 <br> 90% </td> </tr>
+          <tr> <td> </td><td> 57 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission57"> The Last Enemy That Shall Be Destroyed </a> </td> <td  style="text-align: center;"> <img src="images/jack-icon-1.png" width="25px" height="auto"> </td> <td  style="text-align: center;"> Jack Marston </td> <td style="text-align: left;"> Fastest Time <br> Shot Accuracy <br> Number of Headshots </td> <td style="text-align: right;"> 5:19 <br> 90% <br> 15 </td>  <td style="text-align: right;"> <img src="images/achievements/into-the-sunset.png" width="30px" height="auto"> <b> Into the Sunset </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> </td><td>  </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#mission58"> Remember My Family </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Howard Sawicky </td> <td> </td> <td> </td>  <td style="text-align: right;"> <img src="images/achievements/nurture-or-nature.png" width="30px" height="auto"> <b> Nurture or Nature? </b> <img src="../images/antman-trophy-gold.png" width="20px" height="auto"> </td> </tr>
+          </table>
+          <hr>
+          <h4 id="strangers"  style="font-family: 'RDR Lino', sans-serif;"> STRANGERS </h4>
+          <p> In RDR I there are 18 Strangers you can meet and complete missions for all around New Austin, Nuevo Paraiso and West Elizabeth for 100% Completion. You can complete Stranger Missions for Money, Honor, Fame & Scrap for Outfits. More Stranger Missions are unlocked as you complete certain Story Missions. Do note that the Mission "I Know You" is not needed for 100% Completion, but is recommended to complete however. </p>
+          <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Stranger Missions </h5>                  
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <th style="text-align: center;"> Setting </th> <th> </th> <th> Mission </th> <th> </th> <th style="text-align: center;"> Given By </th> <th style="text-align: center;"> Unlocked </th>  <th> </th> <th> </th> </tr>
+            <tr> <td style="text-align: center;"> New Austin </td><td> 1 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger01"> Flowers for a Lady </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Billy West </td> <td style="text-align: center;"> "New Friends, Old Problems" </td> <td style="text-align: right; padding-left: 140px;"> <img src="images/achievements/strange-things-are-afoot.png" width="30px" height="auto"> <b>Strange Things are Afoot</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+            <tr> <td> </td><td> 2 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger02"> Let No Man Put Asunder </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Alma Horlick </td> <td style="text-align: center;"> "Obstacles in Our Path" </td> </tr>
+            <tr> <td> </td><td> 3 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger03"> Jenny's Faith </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Jenny </td> <td style="text-align: center;"> "This is Armadillo, USA" </td> </tr>
+            <tr> <td> </td><td> 4 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger04"> California </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Sam Odessa </td> <td style="text-align: center;"> "Women and Cattle" </td> </tr>
+            <tr> <td> </td><td> 5 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger05"> I Know You </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Strange Man </td> <td style="text-align: center;"> "A Tempest Looms" </td> </tr>
+            <tr> <td> </td><td> 6 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger06"> Water and Honesty </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Andrew McAllister </td> <td style="text-align: center;"> "Political Realities in Armadillo" </td> </tr>
+            <tr> <td> </td><td> 7 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger07"> American Appetites </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Grace Anderson </td> <td style="text-align: center;"> "Political Realities in Armadillo" </td> </tr>
+            <tr> <td> </td><td> 8 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger08"> Funny Man </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Jimmy Saint </td> <td style="text-align: center;"> "Exhuming and Other Fine Hobbies" </td> </tr>
+            <tr> <td> </td><td> 9 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger09"> Who Are You to Judge? </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Jeb Blankenship </td> <td style="text-align: center;"> "Liars, Cheats and Other Proud Americans" </td> </tr>
+            <tr> <td> </td><td> 10 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger10"> Lights, Camera, Action </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> D.S. MacKenna </td> <td style="text-align: center;"> "The Sport of Kings, and Liars" </td> </tr>
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td><td> 11 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger11"> Deadalus and Son </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Charles Kinnear </td> <td style="text-align: center;"> "We Shall Be Together in Paradise" </td> </tr>
+            <tr> <td> </td><td> 12 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger12"> Eva in Peril </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Eva Cortes, Maria Alcalde </td> <td style="text-align: center;"> "Lucky in Love" </td> </tr>
+            <tr> <td> </td><td> 13 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger13"> Poppycock </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Uriah Tollets </td> <td style="text-align: center;"> "Civilization, at any Price" </td> </tr>
+            <tr> <td> </td><td> 14 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger14"> Love is the Opiate </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Zhou </td> <td style="text-align: center;"> "Poppycock" </td> </tr>
+            <tr> <td> </td><td> 15 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger15"> Aztec Gold </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Basilio Aguirre Olmos de la Vargas </td> <td style="text-align: center;"> "Must a Saviour Die?" </td> <td style="text-align: right;"> <img src="images/achievements/people-are-still-strange.png" width="30px" height="auto"> <b>People are Still Strange</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+            <tr> <td style="text-align: center;"> West Elizabeth </td><td> 16 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger16"> An Appointed Time </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Mr. Philmore </td> <td style="text-align: center;"> "An Appointed Time" </td> </tr>
+            <tr> <td> </td><td> 17 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger17"> The Wronged Woman </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Clara LaGuerta </td> <td style="text-align: center;"> "An Appointed Time" </td> </tr>
+            <tr> <td> </td><td> 18 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#stranger18"> The Prohibitionist </a> </td> <td  style="text-align: center;"> <img src="images/stranger-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Abner Forsyth </td> <td style="text-align: center;"> "The Wronged Woman" </td> </tr>
+         </table>
+          <hr>
+          <h4 id="bounties"  style="font-family: 'RDR Lino', sans-serif;"> Bounties </h4>
+          <p> In RDR I the bounty hunting side mission requires you to find a wanted poster and deliver the outlaw, dead or alive, to the nearest prison for monetary rewards. You can find Wanted Posters placed on walls near Train Stations and Prisons inside a settlement by a Marshall. There are 45 bounties total, but you only need to find at least 1 bounty in all 20 possible locations they could spawn in for 100% Completion. You can track the number of bounty locations you have completed under Stats > Score in the Pause Menu. </p>
+          <hr>         
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Bounties </h5>         
+            <caption style="font-size: 14px; color: silver; white-space: nowrap;"> Do note that when you view a wanted poster, you can see where to find the bounty from one of the 20 possible locations the game assigns. <br> It is recommended to capture a bounty alive as they have far more value being alive than dead. <br> Game Progression is tracked by the location of the bounties and not the bounties themselves, so you don't need to get every bounty. You only need to find and get 1 bounty each at 20 different locations for 100% Completion. </caption>         
+            <tr> <th style="text-align: center;"> Setting </th> <th> </th> <th> </th> <th> Bounty </th> <th> </th> <th style="text-align: center;"> Given By </th> <th style="text-align: center;"> Location </th> </tr>
+            <tr> <td style="text-align: center;"> New Austin </td> <td> 1 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Charlie Mash </td> <td style="text-align: center;"> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td>  <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> MacFarlane's Ranch </td> <td style="text-align: right; padding-left: 530px;"> <img src="images/achievements/clemency-pays.png" width="30px" height="auto"> <b>Clemency Pays</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+            <tr> <td> </td> <td> 2 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Harry Dobbing </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> MacFarlane's Ranch </td> </tr>
+            <tr> <td> </td> <td> 3 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Julius Grimes </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> MacFarlane's Ranch </td> </tr>
+            <tr> <td> </td> <td> 4 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Slink Bradshaw </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> MacFarlane's Ranch </td> </tr>
+            <tr> <td> </td> <td> 5 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Irvin Pennick </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> MacFarlane's Ranch </td> </tr>
+            <tr> <td> </td> <td> 6 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Maurice Sweet </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> MacFarlane's Ranch </td> </tr>
+            <tr> <td> </td> <td> 7 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Sid Winkler </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> MacFarlane's Ranch </td> </tr>
+            <tr> <td> </td> <td> 8 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Mo van Barr </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 9 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Perry Rose </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 10 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Cooper Reed </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 11 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Rufus Higbee </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 12 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Cody Witlow </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 13 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Dale Chesson </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 14 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Link Huston </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 15 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Quinn Malloy </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td> </td> <td> 16 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Roscoe Duffy </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Rathskeller Fork </td> </tr>
+            <tr> <td> </td> <td> 17 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Harlan Forbes </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Rathskeller Fork </td> </tr>
+            <tr> <td> </td> <td> 18 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Wade Bassett </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Rathskeller Fork </td> </tr>
+            <tr> <td> </td> <td> 19 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Lester Dugan </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Rathskeller Fork </td> </tr>
+            <tr> <td> </td> <td> 20 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Stanley Mund </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Rathskeller Fork </td> </tr>
+            <tr> <td> </td> <td> 21 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Clark Hatfield </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Rathskeller Fork </td> </tr>
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td> <td> 22 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Sergio Abelda </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Escalera </td> </tr>
+            <tr> <td> </td> <td> 23 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Mateo Clisante </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Escalera </td> </tr>
+            <tr> <td> </td> <td> 24 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Cesar Higueras </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Escalera </td> </tr>
+            <tr> <td> </td> <td> 25 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Selestino Herrada </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Escalera </td> </tr>
+            <tr> <td> </td> <td> 26 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Julian Coronado </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Escalera </td> </tr>            
+            <tr> <td> </td> <td> 27 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Cristo Bustamante </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Chuparosa </td> </tr>
+            <tr> <td> </td> <td> 28 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Ramiro de la Torre </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Chuparosa </td> </tr>            
+            <tr> <td> </td> <td> 29 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Benito Penagarza </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Chuparosa </td> </tr>
+            <tr> <td> </td> <td> 30 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Geraldo Elisaaldez </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Chuparosa </td> </tr>
+            <tr> <td> </td> <td> 31 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Jorge Reynoso </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Chuparosa </td> </tr>
+            <tr> <td> </td> <td> 32 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Rigoberto Artiz </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Chuparosa </td> </tr>
+            <tr> <td> </td> <td> 33 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Raul Ontiveros </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Chuparosa </td> </tr>
+            <tr> <td style="text-align: center;"> West Elizabeth </td> <td> 34 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Moses Lawson </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+            <tr> <td> </td> <td> 35 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Americas Roe </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+            <tr> <td> </td> <td> 35 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Americas Roe </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+            <tr> <td> </td> <td> 36 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Hestor Frith </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+            <tr> <td> </td> <td> 37 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Grant Avery </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+            <tr> <td> </td> <td> 38 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Charlie Hinkle </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+            <tr> <td> </td> <td> 39 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Zebedee Nash </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Blackwater </td> </tr>
+            <tr> <td> </td> <td> 40 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Melvin Spinney </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Blackwater </td> </tr>
+            <tr> <td> </td> <td> 41 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Ralph Stricker </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Blackwater </td> </tr>
+            <tr> <td> </td> <td> 42 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Kent Gallaway </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Blackwater </td> </tr>
+            <tr> <td> </td> <td> 43 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Isaiah Greeley </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Blackwater </td> </tr>
+            <tr> <td> </td> <td> 44 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Honovi </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+            <tr> <td> </td> <td> 45 </td> <td style="text-align: center;"> <img src="images/bounty-icon.png" width="30px" height="auto"> </td> <td> Dakota </td> <td> <img src="images/wanted-poster-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Wanted Poster </td> <td style="text-align: center;"> Manzanita Post </td> </tr>
+          </table>
+          <hr>
+          <h4 id="jobs"  style="font-family: 'RDR Lino', sans-serif;"> Jobs </h4>
+          <p> In RDR I you can participate in horse breaking and nightwatch jobs for monetary rewards. The Horsebreaking side mission requires you to break a horse inside a corral and return it to the rancher. The Nightwatch Job side mission requires you to protect a settlement from rustlers and bandits while on night patrol with a watchdog. Completing all Horsebreaking and Nightwatch jobs is needed for 100% Completion. You can track the jobs you completed via Stats > General in the Pause Menu. </p>
+          <hr>
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Jobs </h5>         
+            <tr> <th> </th> <th> </th> <th> Job </th> <th> </th> <th style="text-align: center;"> Location </th> </tr>                         
+            <tr> <td> 1 </td> <td> <img src="images/horse-breaking-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#job01"> Horsebreaking Job </a> </td> <td> <img src="images/horse-breaking-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Ridgewood Farm, New Austin </td></tr>
+            <tr> <td> 2 </td> <td> <img src="images/horse-breaking-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#job02"> Horsebreaking Job </a> </td> <td> <img src="images/horse-breaking-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Chuparosa, Nuevo Paraiso </td></tr>
+            <tr> <td> 3 </td> <td> <img src="images/nightwatch-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#job03"> Nightwatch Job </a> </td> <td> <img src="images/nightwatch-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Macfarlane's Ranch, New Austin </td></tr>
+            <tr> <td> 4 </td> <td> <img src="images/nightwatch-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#job04"> Nightwatch Job </a> </td> <td> <img src="images/nightwatch-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Chuparosa, Nuevo Paraiso </td></tr>
+            <tr> <td> 5 </td> <td> <img src="images/nightwatch-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#job05"> Nightwatch Job </a> </td> <td> <img src="images/nightwatch-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth </td></tr>
+          </table>
+          <hr>
+          <h4 id="ganghideouts"  style="font-family: 'RDR Lino', sans-serif;"> Gang Hideouts </h4>
+          <p> In RDR I you can complete 7 gang hideout side missions that require you to help people and clear gang hideouts. These missions start automatically when you are near their locations. Clearing hideouts increases honor and gives various rewards such as new weapons and pardon letters.  Clearing all Gang Hideouts is required for 100% Completion. You can track the number of gang hideouts you cleared via Stats > General in the Pause Menu. </p>
+          <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Gang Hideouts </h5>                  
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <th style="text-align: center;"> Setting </th> <th> </th> <th> Gang Hideout </th> <th style="text-align: center;"> Unlocked </th>  <th> </th> <th> </th> </tr>
+            <tr> <td style="text-align: center;"> New Austin </td> <td> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout00"> Solomon's Folly </a> <br> <span style="font-size: 12px; color: silver;"> Extra exclusive mission. </span> </td> <td style="text-align: center;"> "New Friends, Old Problems" </td></tr>          
+            <tr> <td> </td> <td> 1 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout01"> Twin Rocks </a> </td> <td style="text-align: center;"> "New Friends, Old Problems" </td></tr>          
+            <tr> <td> </td> <td> 2 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout02"> Tumbleweed </a> </td> <td style="text-align: center;"> "New Friends, Old Problems" </td></tr>          
+            <tr> <td> </td> <td> 3 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout03"> Pike's Basin </a> </td> <td style="text-align: center;"> "Justice in Pike's Basin" </td></tr>          
+            <tr> <td> </td> <td> 4 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout04"> Gaptooth Breach </a> </td> <td style="text-align: center;"> "Man is Born Unto Trouble" </td> <td style="text-align: right; padding-left: 605px;"> <img src="images/achievements/austin-overpowered.png" width="30px" height="auto"> <b>Austin Overpowered</b> <img src="../images/antman-trophy-silver.png" width="20px" height="auto"> </td> </tr>          
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td> <td> 5 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout05"> Nosalida </a> </td> <td style="text-align: center;"> "We Shall Be Together in Paradise" </td></tr>          
+            <tr> <td style="text-align: center;"> New Austin </td> <td> 6 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout06"> Fort Mercer </a> </td> <td style="text-align: center;"> "We Shall Be Together in Paradise" </td> <td style="text-align: right;"> <img src="images/achievements/instinto-asesino.png" width="30px" height="auto"> <b>Instinto Asesino</b> <img src="../images/antman-trophy-silver.png" width="20px" height="auto"> </td></tr>          
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td> <td> 7 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#ganghideout07"> Tesoro Azul </a> </td> <td style="text-align: center;"> "The Demon Drink" </td> <td style="text-align: right;"> <img src="images/achievements/evil-spirits.png" width="30px" height="auto"> <b>Evil Spirits</b> <img src="../images/antman-trophy-silver.png" width="20px" height="auto"> </td></tr>          
+          </table>       
+     </div>
+    </div>
+  
+    <div class="card text-bg-dark mb-3" id="ambientchallenges" style="max-width: 90rem; margin-bottom: 100px; margin-left: auto; margin-right: auto; display: block; margin-top: 2rem; font-style: normal;">
+      <div class="card-body">
+        <div class="card-header">
+          <h3 style="font-family: 'RDR Lino', sans-serif;"> Ambient Challenges </h3>
+        </div>   
+        <p style="padding-top: 15px;"> In Red Dead Redemption you can complete different ambient challenges to help earn rewards and become a legend of the west. Different Challenges each have 10 ranks to complete, and every 5 ranks unlocks a new reward. Completing all 4 Ambient Challenges is required for 100% completion. You can track your Challenge Ranks through the Journal in the Pause Menu. </p>
+        <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline; padding-bottom: 15px;"> All Ambient Challenges </h5>         
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <th style="text-align: center;"> 1 </th> <td> <img src="images/master-hunter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge01"> Master Hunter </a> </td>  </tr>
+            <tr> <th style="text-align: center;"> 2 </th> <td> <img src="images/sharpshooter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge02"> Sharpshooter </a> </td>  </tr>
+            <tr> <th style="text-align: center;"> 3 </th> <td> <img src="images/survivalist-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge03"> Survivalist </a> </td>  </tr>
+            <tr> <th style="text-align: center;"> 4 </th> <td> <img src="images/treasure-hunter-icon-2.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge04"> Treasure Hunter </a> </td>  </tr>
+            <tr> <th style="text-align: center;"> 5 </th> <td> <img src="images/sharpshooter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge05"> Mastery Tomahawk </a> </td> <td style="text-align: right; padding-left: 990px;"> <img src="images/achievements/axe-master.png" width="30px" height="auto"> <b>Axe Master</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td>  </tr>
+            <tr> <th style="text-align: center;"> 6 </th> <td> <img src="images/sharpshooter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge06"> Explosive Rifle Mastery </a> </td> <td style="text-align: right;"> <img src="images/achievements/master-exploder.png" width="30px" height="auto"> <b>Master Exploder</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td>  </tr>
+          </table>
+          <hr>
+          <p style="float: right; display: inline;"><img src="images/achievements/frontiersman.png" width="28px" height="auto"> <b> Frontiersman </b> <img src="../images/antman-trophy-silver.png" width="20px" height="auto"> </p>       
+          <br>            
+      </div>
+    </div>
+
+    <div class="card text-bg-dark mb-3" id="misc" style="max-width: 90rem; margin-bottom: 100px; margin-left: auto; margin-right: auto; display: block; margin-top: 2rem; font-style: normal;">
+      <div class="card-body">
+        <div class="card-header">
+          <h3 style="font-family: 'RDR Lino', sans-serif;"> Miscellaneous </h3>
+        </div>   
+        <p style="padding-top: 15px;"> In addition to 100% completion, there are also miscellaneous tasks you can complete across New Austin, Nuevo Paraiso and West Elizabeth, which may or may not be naturally completed as you complete the story and explore the large environment of Red Dead Redemption. These miscellaneous tasks are all required for 100% Completion. </p>
+        <hr>
+        <h4 style="font-family: 'RDR Lino', sans-serif;"> Safehouses </h4>
+        <p> In RDR I you can find and purchase safehouses where you can save progress, change clothes, get extra ammo for your weapons. Some will be naturally unlocked as you complete the story, others you have to purchase by walking up to a vacant property at <img src="images/purchaseable-property-icon.png" width="25px" height="auto">. Owning all 13 Safehouses is required for 100% Completion. Renting Safehouses for a night do not count towards completion. </p>
+        <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline; padding-bottom: 15px;"> All Safehouses </h5>         
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <th style="text-align: center;"> Setting </th> <th> </th><th> </th> <th> Safehouse </th> <th style="text-align: center;"> Cost </th> </tr> 
+            <tr> <td style="text-align: center;"> New Austin </td> <td style="text-align: center;"> 1 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> MacFarlane's Ranch Safehouse </td> <td style="text-align: center;"> - </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 2 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Armadillo Safehouse </td> <td style="text-align: center;"> $50 </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 3 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Rathskeller Fork Safehouse </td> <td style="text-align: center;"> $100 </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 4 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Thieves' Landing Safehouse </td> <td style="text-align: center;"> $100 </td>  </tr>
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td> <td style="text-align: center;"> 5 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Irish's Shack Puerto Cuchillo </td> <td style="text-align: center;"> - </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 6 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Escalera Safehouse </td> <td style="text-align: center;"> $150 </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 7 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Chuparosa Safehouse </td> <td style="text-align: center;"> $200 </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 8 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Casa Madrugada Safehouse </td> <td style="text-align: center;"> $250 </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 9 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> El Matadero Safehouse </td> <td style="text-align: center;"> $150 </td>  </tr>
+            <tr> <td style="text-align: center;"> West Elizabeth </td> <td style="text-align: center;"> 10 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Blackwater Safehouse </td> <td style="text-align: center;"> - </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 11 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Manzanita Post Safehouse </td> <td style="text-align: center;"> $400 </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 12 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Beecher's Hope Safehouse (John and Abigail's Room) </td> <td style="text-align: center;"> - </td>  </tr>
+            <tr> <td> </td> <td style="text-align: center;"> 13 </td> <td> <img src="images/property-icon.png" width="25px" height="auto"> </td> <td> Beecher's Hope Safehouse (Jack's Room) </td> <td style="text-align: center;"> - </td>  </tr>
+          </table>
+          <hr>
+          <h4 style="font-family: 'RDR Lino', sans-serif;"> Minigames </h4>
+          <p> In RDR I you can find and play different gambling minigames with NPCs across towns and settlements. Completing all 6 minigames is required for 100% completion. You have to complete all rounds (i.e. beat/eliminate all the NPCS you play against) in a minigame for it to be counted. </p>
+          <hr>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Minigames </h5>        
+          <table class="table-1-1" style="border-collapse: collapse;">
+          <caption style="font-size: 14px; color: silver; white-space: nowrap;"> You can see <a href="https://youtu.be/af1gQ-Zu2EY?si=MDxOC6FZQz9Eox28" target="_blank" class="content-link" style="color: silver;">here</a> a video walkthrough on how to win over 2000 chips in a hand of Poker for a trophy! <br> You can see <a href="https://youtu.be/iUPPdnmDh84?si=FhDg-yg8qpnmCeD8" target="_blank" class="content-link" style="color: silver;">here</a> a video walkthrough on how to win a Liar's Dice minigame without losing a single die for another trophy! <br>  You can see <a href="https://youtu.be/wfL9I-tVUWw?si=Qx9glQTZuRaL-QTo" target="_blank" class="content-link" style="color: silver;">here</a> a video walkthrough on how to get a ringer in Horseshoes for ANOTHER trophy!  </caption>
+            <tr> <th> </th> <th> </th><th> Minigame </th> <th> </th><th style="text-align: center;"> Location </th> <th style="text-align: center;"> Buy-in </th> </tr>
+            <tr> <td> 1 </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td> Poker </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> MacFarlane's Ranch, New Austin </td> <td style="text-align: center;"> $10 (10 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Armadillo, New Austin </td> <td style="text-align: center;"> $25 (250 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Thieves' Landing, New Austin </td> <td style="text-align: center;"> $25 (250 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Chuparosa, Nuevo Paraiso </td> <td style="text-align: center;"> $50 (500 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Casa Madrugada, Nuevo Paraiso </td> <td style="text-align: center;"> $50 (500 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth (Saloon) </td> <td style="text-align: center;"> $100 (1000 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/poker-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth (Hotel) </td> <td style="text-align: center;"> $250 (2500 Chips) </td> </tr>
+            <tr> <td> 2 </td> <td> <img src="images/blackjack-icon-1.png" width="30px" height="auto"> </td> <td> Blackjack </td> <td> <img src="images/blackjack-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Thieves' Landing, New Austin </td> <td style="text-align: center;"> $40 (400 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/blackjack-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Rathskeller Fork, New Austin </td> <td style="text-align: center;"> $20 (200 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/blackjack-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Chuparosa, Nuevo Paraiso </td> <td style="text-align: center;"> $30 (300 Chips) </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/blackjack-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth </td> <td style="text-align: center;"> $50 (500 Chips) </td> </tr>
+            <tr> <td> 3 </td> <td> <img src="images/liars-dice-icon.png" width="30px" height="auto"> </td> <td> Liar's Dice </td> <td> <img src="images/liars-dice-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Thieves' Landing, New Austin </td> <td style="text-align: center;"> $20 </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/liars-dice-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Escalera, Nuevo Paraiso </td> <td style="text-align: center;"> $20 </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/liars-dice-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Casa Madrugada, Nuevo Paraiso </td> <td style="text-align: center;"> $20 </td> </tr>
+            <tr> <td> 4 </td> <td> <img src="images/five-finger-fillet-icon-1.png" width="30px" height="auto"> </td> <td> Five Finger Fillet </td> <td> <img src="images/five-finger-fillet-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Armadillo, New Austin </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/five-finger-fillet-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Thieves' Landing, New Austin </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/five-finger-fillet-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Escalera, Nuevo Paraiso </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/five-finger-fillet-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Torquemada, Nuevo Paraiso </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/five-finger-fillet-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Manzanita Post, West Elizabeth </td> <td> </td> </tr>
+            <tr> <td> 5 </td> <td> <img src="images/arm-wrestling-icon.png" width="30px" height="auto"> </td> <td> Arm Wrestling </td> <td> <img src="images/arm-wrestling-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Plainview, New Austin </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/arm-wrestling-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Agave Viejo, Nuevo Paraiso </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/arm-wrestling-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> El Matadero, Nuevo Paraiso </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/arm-wrestling-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Pacific Union Railroad Camp, West Elizabeth </td> <td> </td> </tr>
+            <tr> <td> 6 </td> <td> <img src="images/horseshoes-icon.png" width="30px" height="auto"> </td> <td> Horseshoes </td> <td> <img src="images/horseshoes-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> MacFarlane's Ranch, New Austin </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/horseshoes-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Rathskeller Fork, New Austin </td> <td> </td> </tr>
+            <tr> <td> </td> <td> </td> <td> </td> <td> <img src="images/horseshoes-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Las Hermanas, Nuevo Paraiso </td> <td> </td> </tr>
+          </table>
+          <p style="float: right; display: inline;"><img src="images/achievements/high-roller.png" width="28px" height="auto"> <b> High Roller </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+          <br>       
+          <br>
+          <p style="float: right; display: inline;"><img src="images/achievements/no-dice.png" width="28px" height="auto"> <b> No Dice </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+          <br>       
+          <br>
+          <p style="float: right; display: inline;"><img src="images/achievements/what-about-hand-grenades.png" width="28px" height="auto"> <b> What About Hand Grenades? </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+          <br>
+          <br>       
+          <hr>
+          <h4 style="font-family: 'RDR Lino', sans-serif;"> Rare Weapons </h4>
+          <p> In RDR I you can find and purchase rare invaluable weapons from gunsmith stores all around the map once you have completed the Story Mission "An Appointed Time" (The First One you can get before the mission, but the rest you would need the mission to be completed). Buying all 5 rare weapons from a gunsmith is required for 100% completion. </p>
+          <hr>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Rare Weapons </h5>        
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <th> </th> <th> Weapon </th> <th> </th><th style="text-align: center;"> Location </th> <th style="text-align: center;"> Cost </th> </tr>
+            <tr> <td> 1 </td> <td> Semi-auto Shotgun </td> <td>  <img src="images/gunsmith-store-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Escalera, Nuevo Paraiso </td> <td style="text-align: center;"> $1100 </td></tr>
+            <tr> <td> 2 </td> <td> LeMat Revolver </td> <td>  <img src="images/gunsmith-store-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Escalera, Nuevo Paraiso </td> <td style="text-align: center;"> $1250 </td></tr>
+            <tr> <td> 3 </td> <td> Carcano Rifle </td> <td>  <img src="images/gunsmith-store-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth </td> <td style="text-align: center;"> $1100 </td></tr>
+            <tr> <td> 4 </td> <td> Evans Repeater </td> <td>  <img src="images/gunsmith-store-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth </td> <td style="text-align: center;"> $1000 </td></tr>
+            <tr> <td> 5 </td> <td> Mauser Pistol </td> <td>  <img src="images/gunsmith-store-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth </td> <td style="text-align: center;"> $800 </td></tr>
+          </table>
+          <p style="float: right; display: inline;"><img src="images/achievements/exquisite-taste.png" width="28px" height="auto"> <b> Exquisite Taste </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+          <br>
+          <br>       
+          <hr>
+          <h4 style="font-family: 'RDR Lino', sans-serif;"> Outfits </h4>
+          <p> In RDR I you can wear 18 different outfits to change John and Jack's style at a camp or safehouse. Some outfits are awarded for completing missions, while other outfits must be earned. Once an outfit is unlocked, you have to find and collect different outfit scraps for that outfit by completing various jobs and minigames (Which is why you want to have all the Missions and Events and Minigames completed beforehand!). Although there are 18 outfits total, you only need to earn 9 specific outfits for 100% Completion. These outfits are marked with a colored bar on the left. You can track how many outfits you have discovered and completed via Stats > Misc in the pause menu. </p>
+          <hr>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Outfits </h5>        
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <td> 1 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit01"> Cowboy Outfit </a> <br> <span style="font-size: 14px; color: silver;"> This is Marston's typical bounty hunter clothing. </span> </td> </tr>
+            <tr> <td> 2 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit02"> Gentleman's Attire </a> <br> <span style="font-size: 14px; color: silver;"> Wearing this high-class attire allows you into the high stakes Poker games in Blackwater. </span> </td> </tr>
+            <tr> <td> 3 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit03"> Deadly Assassin </a> <br> <span style="font-size: 14px; color: silver;"> You are the most bad-ass gunslinger in the West! Dead Eye regenerates twice as fast. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 4 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit04"> Elegant Suit </a> <br> <span style="font-size: 14px; color: silver;"> When you wear this Elegant Suit it will be possible to cheat at Poker. </span> </td> <td style="text-align: right; padding-left: 470px;"> <img src="images/achievements/he-cleans-up-well.png" width="30px" height="auto"> <b>He Cleans Up Well!</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+            <tr> <td> 5 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit05"> Walton's Gang Outfit </a> <br> <span style="font-size: 14px; color: silver;"> Disguise yourself as part of Walton's Gang. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 6 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit06"> Bollard Twins Outfit </a> <br> <span style="font-size: 14px; color: silver;"> Disguise yourself as part of the Bollard Twins gang. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 7 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit07"> Treasure Hunter Outfit </a> <br> <span style="font-size: 14px; color: silver;"> Disguise yourself as part of the Treasure Hunter gang. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 8 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit08"> Bandito Outfit </a> <br> <span style="font-size: 14px; color: silver;"> Disguise yourself as a Bandito and outlaws will welcome you in Mexico. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 9 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit09"> Reyes' Rebel Outfit </a> <br> <span style="font-size: 14px; color: silver;"> Disguise yourself as one of Reyes' Rebels and you will be treated kindly by the law in Mexico. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 10 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit10"> US Army Outfit </a> <br> <span style="font-size: 14px; color: silver;"> Look like an enlisted man while wearing this uniform. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 11 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit11"> US Marshal Outfit </a> <br> <span style="font-size: 14px; color: silver;"> Dress as a marshal, and you will be treated as part of the law in the United States. </span> </td> </tr>
+            <tr> <td> 12 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit12"> Legend of the West </a> <br> <span style="font-size: 14px; color: silver;"> Show off your increased Dead Eye ability as a Legend of the West. </span> </td> </tr>
+            <tr> <td> 13 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit13"> Bureau Uniform </a> <br> <span style="font-size: 14px; color: silver;"> Dress like a federal bureau agent and the law won't be able to touch you. </span> </td> </tr>
+            <tr> <td> 14 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit14"> Duster Coat </a> <br> <span style="font-size: 14px; color: silver;"> A worn-out old duster. The coat protects your clothing from trail dust, but not much else. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 15 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit15"> Mexican Poncho </a> <br> <span style="font-size: 14px; color: silver;"> A musty old poncho. A souvenir of your travels in Mexico. </span> </td> </tr>
+            <tr style="border-left: solid #d80419;"> <td> 16 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit16"> Rancher Clothing </a> <br> <span style="font-size: 14px; color: silver;"> This is Marston's typical clothing when tending the ranch at Beecher's Hope. </span> </td> </tr>
+            <tr> <td> 17 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit17"> Expert Hunter </a> <br> <span style="font-size: 14px; color: silver;"> Backwoods trappers taught you well. Gather twice as many provisions from hunting and skinning animals. </span> </td> </tr>
+            <tr> <td> 18 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit18"> Savvy Merchant </a> <br> <span style="font-size: 14px; color: silver;"> You have quite the reputation from working the docks. Gunsmiths will charge you half price on their goods. </span> </td> </tr>
+          </table>
+          <hr>
+          <h4 style="font-family: 'RDR Lino', sans-serif;"> Locations </h4>
+          <p> In RDR I there are a total of 94 locations to discover, many of them discovered from just playing through Story and Side Missions. There are also territorial maps that once used in the satchel uncovers all the towns, settlements landmarks and hideouts of each region. Buying territory maps from general stores and gunsmith stores is the most efficient way to complete location discovery. Discovering all 94 locations is required for 100% Completion. You can track how many areas you have discovered in each region through Stats > General in the Pause Menu. </p>
+          <hr>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Locations </h5>        
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <th style="text-align: center;"> Setting </th> <th> </th> <th style="text-align: center;"> Location </th> </tr>          
+            <tr> <td style="text-align: center;"> New Austin </td> <td style="text-align: center;"> 1 </td> <td style="text-align: center;"> Armadillo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 2 </td> <td style="text-align: center;"> Benedict Pass </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 3 </td> <td style="text-align: center;"> Benedict Point </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 4 </td> <td style="text-align: center;"> Brittlebrush Trawl </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 5 </td> <td style="text-align: center;"> Cholla Springs </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 6 </td> <td style="text-align: center;"> Coot's Chapel </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 7 </td> <td style="text-align: center;"> Critchley's Ranch </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 8 </td> <td style="text-align: center;"> Cueva Seca </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 9 </td> <td style="text-align: center;"> Del Lobo Rock </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 10 </td> <td style="text-align: center;"> Fort Mercer </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 11 </td> <td style="text-align: center;"> Gaptooth Breach </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 12 </td> <td style="text-align: center;"> Gaptooth Ridge </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 13 </td> <td style="text-align: center;"> Greenhollow </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 14 </td> <td style="text-align: center;"> Hamlin's Passing </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 15 </td> <td style="text-align: center;"> Hanging Rock </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 16 </td> <td style="text-align: center;"> Hennigan's Stead </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 17 </td> <td style="text-align: center;"> Jorge's Gap </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 18 </td> <td style="text-align: center;"> Lake Don Julio </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 19 </td> <td style="text-align: center;"> MacFarlane's Ranch </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 20 </td> <td style="text-align: center;"> Manteca Falls </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 21 </td> <td style="text-align: center;"> Mason's Bridge </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 22 </td> <td style="text-align: center;"> Mercer Station </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 23 </td> <td style="text-align: center;"> Mescalero </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 24 </td> <td style="text-align: center;"> Odd Fellow's Rest </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 25 </td> <td style="text-align: center;"> The Old Bacchus Place </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 26 </td> <td style="text-align: center;"> Pike's Basin </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 27 </td> <td style="text-align: center;"> Plainview </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 28 </td> <td style="text-align: center;"> Pleasance House </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 29 </td> <td style="text-align: center;"> Rathskeller Fork </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 30 </td> <td style="text-align: center;"> Rattlesnake Hollow </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 31 </td> <td style="text-align: center;"> Repentance Rock </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 32 </td> <td style="text-align: center;"> Ridgewood Farm </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 33 </td> <td style="text-align: center;"> Riley's Charge </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 34 </td> <td style="text-align: center;"> Rio Bravo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 35 </td> <td style="text-align: center;"> Rio del Lobo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 36 </td> <td style="text-align: center;"> The Scratching Post </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 37 </td> <td style="text-align: center;"> Silent Stead </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 38 </td> <td style="text-align: center;"> Solomon's Folly </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 39 </td> <td style="text-align: center;"> Stillwater Creek </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 40 </td> <td style="text-align: center;"> Thieves' Landing </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 41 </td> <td style="text-align: center;"> Tumbleweed </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 42 </td> <td style="text-align: center;"> Twin Rocks </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 43 </td> <td style="text-align: center;"> Two Crows </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 44 </td> <td style="text-align: center;"> Venter's Place </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 45 </td> <td style="text-align: center;"> Warthington Ranch </td></tr>
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td> <td style="text-align: center;"> 46 </td> <td style="text-align: center;"> Agave Viejo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 47 </td> <td style="text-align: center;"> Alta Cabeza </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 48 </td> <td style="text-align: center;"> Barranca </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 49 </td> <td style="text-align: center;"> Butter Bridge </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 50 </td> <td style="text-align: center;"> Campo Mirada </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 51 </td> <td style="text-align: center;"> Casa Madrugada </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 52 </td> <td style="text-align: center;"> Chuparosa </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 53 </td> <td style="text-align: center;"> Crooked Toes </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 54 </td> <td style="text-align: center;"> Diez Coronas </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 55 </td> <td style="text-align: center;"> El Matadero </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 56 </td> <td style="text-align: center;"> El Presidio </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 57 </td> <td style="text-align: center;"> Escalera </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 58 </td> <td style="text-align: center;"> Hendidura Grande </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 59 </td> <td style="text-align: center;"> Laguna Borrego </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 60 </td> <td style="text-align: center;"> Las Hermanas </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 61 </td> <td style="text-align: center;"> Mesa de la Luna </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 62 </td> <td style="text-align: center;"> Mesa del Sol </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 63 </td> <td style="text-align: center;"> Nosalida </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 64 </td> <td style="text-align: center;"> Ojo del Diablo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 65 </td> <td style="text-align: center;"> Perdido </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 66 </td> <td style="text-align: center;"> Plata Grande </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 67 </td> <td style="text-align: center;"> Primera Quebrada </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 68 </td> <td style="text-align: center;"> Puerto Cuchillo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 69 </td> <td style="text-align: center;"> Punta Orgullo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 70 </td> <td style="text-align: center;"> Ramita de la Baya </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 71 </td> <td style="text-align: center;"> Rancho Polvo </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 72 </td> <td style="text-align: center;"> Rio del Toro </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 73 </td> <td style="text-align: center;"> Roca de Madera </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 74 </td> <td style="text-align: center;"> Sepulcro </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 75 </td> <td style="text-align: center;"> Sidewinder Gulch </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 76 </td> <td style="text-align: center;"> Tesoro Azul </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 77 </td> <td style="text-align: center;"> Torquemada </td></tr>
+            <tr> <td style="text-align: center;"> West Elizabeth </td> <td style="text-align: center;"> 78 </td> <td style="text-align: center;"> Aurora Basin </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 79 </td> <td style="text-align: center;"> Bearclaw Camp </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 80 </td> <td style="text-align: center;"> Beecher's Hope </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 81 </td> <td style="text-align: center;"> Blackwater </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 82 </td> <td style="text-align: center;"> Broken Tree </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 83 </td> <td style="text-align: center;"> Cochinay </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 84 </td> <td style="text-align: center;"> Dixon Crossing </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 85 </td> <td style="text-align: center;"> Great Plains </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 86 </td> <td style="text-align: center;"> Manzanita Post </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 87 </td> <td style="text-align: center;"> Marston Homestead </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 88 </td> <td style="text-align: center;"> Montana Ford </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 89 </td> <td style="text-align: center;"> Nekoti Rock </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 90 </td> <td style="text-align: center;"> Pacific Union Railroad Camp </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 91 </td> <td style="text-align: center;"> Tall Trees </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 92 </td> <td style="text-align: center;"> Tanner's Reach </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 93 </td> <td style="text-align: center;"> Tanner's Span </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> 94 </td> <td style="text-align: center;"> Wreck of the Serendipity </td></tr>
+          </table>
+          <br>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Territory Maps </h5>        
+          <table class="table-1-1" style="border-collapse: collapse;">
+          <caption style="font-size: 14px; color: silver; white-space: nowrap;"> It is recommended to purchase and use territory maps for after completing all Story Missions or after "The Outlaw's Return" as you will naturally discover a lot of the locations through story progression anyway. <br> You can then use the maps to make discovering all remaining locations easier to do. </caption>
+            <tr> <th> </th> <th> Map </th> <th> </th><th style="text-align: center;"> Location </th> <th style="text-align: center;"> Cost </th> </tr>
+            <tr> <td> 1 </td> <td> Hennigan's Stead </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Hennigan's Stead, New Austin </td> <td style="text-align: center;"> $25 </td>  </tr>            
+            <tr> <td> 2 </td> <td> Cholla Springs </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Armadillo, New Austin </td> <td style="text-align: center;"> $15 </td>  </tr>        
+            <tr> <td> 3 </td> <td> Gaptooth Bridge </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Armadillo, New Austin </td> <td style="text-align: center;"> $20 </td>  </tr>        
+            <tr> <td> 4 </td> <td> Rio Bravo </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Thieves' Landing, New Austin </td> <td style="text-align: center;"> $35 </td>  </tr>        
+            <tr> <td> 5 </td> <td> Punta Orgullo </td> <td>  <img src="images/gunsmith-store-icon.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Escalera, Nuevo Paraiso </td> <td style="text-align: center;"> $23 </td>  </tr>        
+            <tr> <td> 6 </td> <td> Perdido </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Chuparosa, Nuevo Paraiso </td> <td style="text-align: center;"> $25 </td>  </tr>        
+            <tr> <td> 7 </td> <td> Diez Coronas </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Chuparosa, Nuevo Paraiso </td> <td style="text-align: center;"> $28 </td>  </tr>        
+            <tr> <td> 8 </td> <td> Great Plains </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Blackwater, West Elizabeth </td> <td style="text-align: center;"> - </td>  </tr>       
+            <tr> <td> 9 </td> <td> Tall Trees </td> <td>  <img src="images/general-store-icon-1.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Manzanita Post, West Elizabeth </td> <td style="text-align: center;"> $33 </td>  </tr>                  
+          </table>
+          <p style="float: right; display: inline;"><img src="images/achievements/on-the-trail-of-de-vaca.png" width="28px" height="auto"> <b> On the Trail of de Vaca </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+          <br>
+          <br>  
+      </div>
+    </div>
+
+    <div class="card text-bg-dark mb-3" id="misc" style="max-width: 90rem; margin-bottom: 100px; margin-left: auto; margin-right: auto; display: block; margin-top: 2rem; font-style: normal;">
+      <div class="card-body">
+        <div class="card-header">
+          <h3 id="missionsandevents2" style="font-family: 'RDR Lino', sans-serif; padding-top: 15px;"> Undead Nightmare - Missions and Events </h3>
+        </div>   
+        <p style="padding-top: 15px;"> In Undead Nightmare there are 55 total missions and events to complete for 100% completion: <a class="content-link" href="#storymissions2">4 Story Missions and all 5 Cemetaries</a>, <a class="content-link" href="#strangers2">10 Survivors</a>, <a class="content-link" href="#ssavetowns">20 towns to save</a> and <a class="content-link" href="#missingpeople">16 missing persons</a>. </p>
+        <hr>
+        <h4 id="storymissions2"  style="font-family: 'RDR Lino', sans-serif;"> STORY </h4>
+        <p> Your first task in the 100% Completion of Undead Nightmare to complete all 4 Story Missions. These also include a few Survivor Missions and all Cemetaries as well, as these missions are part of completing the story of Undead Nightmare. </p>
+        <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Story Missions </h5>        
+        <table class="table-1-1" style="border-collapse: collapse;">
+          <tr> <th style="text-align: center;"> Setting </th><th> </th> <th> Mission </th> <th> </th> <th style="text-align: center;"> Given By </th> </tr>
+          <tr> <td style="text-align: center;"> New Austin </td><td> 1 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadmission01"> Love in the Time of Plague </a> </td> <td  style="text-align: center;"> - </td> <td  style="text-align: center;"> - </td> </tr>
+          <tr> <td> </td><td>  </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors02"> Curious Tales from Blackwater, U.S.A </a> <br> <span style="font-size: 14px; color: silver;"> Survivor Mission </span> </td> <td  style="text-align: center;"> <img src="images/undead-nightmare-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Undead Nightmare </td> <td style="text-align: right; padding-left: 425px;"> <img src="images/achievements/the-downward-spiral.png" width="30px" height="auto"> <b>The Downward Spiral</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> </td><td>  </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#cemetaries01"> Blackwater Graveyard </a>  </td> <td  style="text-align: center;"> <img src="images/cemetary-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Curious Tales from Blackwater, U.S.A </td> </tr>
+          <tr> <td> </td><td> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors02"> Get Back in That Hole, Partner </a> <br> <span style="font-size: 14px; color: silver;"> Survivor Mission </span> </td> <td  style="text-align: center;"> <img src="images/undead-nightmare-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Undead Nightmare </td> </tr>
+          <tr> <td> </td><td>  </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#cemetaries02"> Coot's Chapel </a>  </td> <td  style="text-align: center;"> <img src="images/cemetary-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Get Back in That Hole, Partner </td> </tr>
+          <tr> <td> </td><td>  </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#cemetaries03"> Odd Fellow's Rest </a>  </td> <td  style="text-align: center;"> <img src="images/cemetary-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Get Back in That Hole, Partner </td> </tr>
+          <tr> <td> </td><td>  </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#cemetaries04"> Tumbleweed's Graveyard </a>  </td> <td  style="text-align: center;"> <img src="images/cemetary-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Get Back in That Hole, Partner </td> </tr>
+          <tr> <td> </td><td> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors03"> A Cure for Most of What Ails You </a> <br> <span style="font-size: 14px; color: silver;"> Survivor Mission </span> </td> <td  style="text-align: center;"> <img src="images/undead-nightmare-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Undead Nightmare </td> <td style="text-align: right;"> <img src="images/achievements/judge-a-man-by-the.png" width="30px" height="auto"> <b>Judge A Man By The...</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> </td><td> 2 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadmission02"> American Imperialism </a> </td> <td  style="text-align: center;"> <img src="images/nigel-west-dickens-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> American Imperialism </td> </tr>
+          <tr> <td style="text-align: center;"> Nuevo Paraiso </td><td> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors04"> Mother Superior Blues </a> <br> <span style="font-size: 14px; color: silver;"> Survivor Mission </span> </td> <td  style="text-align: center;"> <img src="images/undead-nightmare-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Undead Nightmare </td> <td style="text-align: right;"> <img src="images/achievements/the-superior-dance.png" width="30px" height="auto"> <b>The Superior Dance</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+          <tr> <td> </td><td>  </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#cemetaries05"> Sepulcro </a>  </td> <td  style="text-align: center;"> <img src="images/cemetary-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Mother Superior Blues </td> </tr>
+          <tr> <td> </td><td> 3 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadmission03"> A Civilized Man </a> </td> <td  style="text-align: center;"> <img src="images/abraham-reyes-icon-1.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> A Civilized Man </td> </tr>
+          <tr> <td> </td><td> 4 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadmission04"> On A Pale Horse </a> </td> <td  style="text-align: center;"> - </td> <td  style="text-align: center;"> - </td> <td style="text-align: right;"> <img src="images/achievements/alls-right-with-the-world.png" width="30px" height="auto"> <b>All's Right With the World</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+        </table>
+        <hr>
+        <h4 id="strangers2"  style="font-family: 'RDR Lino', sans-serif;"> SURVIVORS </h4>
+        <p>  In Undead Nightmare there are 6 more survivors you can meet and complete missions for (other than the 4 you meet through the Story) all around New Austin, Nuevo Paraiso and West Elizabeth for 100% Completion. You can complete Survivor Missions for Ammo & Scrap for Outfits. More Survivor Missions are unlocked as you complete certain Story Missions. </p>
+        <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Survivor Missions </h5>     
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <th style="text-align: center;"> Setting </th> <th> </th> <th> Mission </th> <th> </th> <th style="text-align: center;"> Given By </th> <th style="text-align: center;"> Unlocked </th>  <th> </th> <th> </th> </tr>
+            <tr> <td style="text-align: center;"> New Austin </td><td> 1 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors05"> Birth of the Conservation Movement </a> </td> <td  style="text-align: center;"> <img src="images/undead-survivor-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Sasquatch Hunter </td> <td style="text-align: center;"> "Curious Tales from Blackwater" </td> <td style="text-align: right; padding-left: 230px;"> <img src="images/achievements/six-years-in-the-making.png" width="30px" height="auto"> <b>Six Years In The Making</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td> </tr>
+            <tr> <td> </td><td> 2 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors06"> Paternal Pride </a> </td> <td  style="text-align: center;"> <img src="images/undead-survivor-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Bonnie MacFarlane </td> <td style="text-align: center;"> "Curious Tales from Blackwater" </td> </tr>
+            <tr> <td> </td><td> 3 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors07"> Dinner for Two </a> </td> <td  style="text-align: center;"> <img src="images/undead-survivor-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Marshall Johnson </td> <td style="text-align: center;"> "Curious Tales from Blackwater" </td> </tr>
+            <tr> <td> </td><td> 4 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors08"> Flith and Other Entertainment </a> </td> <td  style="text-align: center;"> <img src="images/undead-survivor-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> D.S. McKenna </td> <td style="text-align: center;"> "Get Back in That Hole, Partner" </td> </tr>
+            <tr> <td> </td><td> 5 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors09"> Missing Souls </a> </td> <td  style="text-align: center;"> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> American Army Captain </td> <td style="text-align: center;"> "A Cure for Most of What Ails You" </td> </tr>
+            <tr> <td> </td><td> 6 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#undeadsurvivors10"> Biographies and Lies </a> </td> <td  style="text-align: center;"> <img src="images/undead-survivor-icon.png" width="30px" height="auto"> </td> <td  style="text-align: center;"> Landon Ricketts </td> <td style="text-align: center;"> "American Imperialism" </td> </tr>  
+          </table>
+          <hr>
+          <h4 id="savetowns"  style="font-family: 'RDR Lino', sans-serif;"> SAVE TOWNS </h4>
+          <p>  In Undead Nightmare there are 23 settlements between West Elizabeth, New Austin and Nuevo Paraiso, 20 of which have to be saved from hordes of the undead. You will unlock more towns to save as you explore new territories on the map.  Saving all 20 settlements at least once is needed for 100% Completion. It is recommended to save towns as early as you can throughout the story of Undead Nightmare for mostly ammo rewards and new weapons for survival. </p>
+          <hr>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Towns to Save </h5>   
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <caption style="font-size: 14px; color: silver; white-space: nowrap;"> You will likely naturally complete a lot of towns throughout story progression, but just as a precaution, it is best to do all as early as possible to fast travel between towns faster. <br> You can save settlements quicker by just giving ammo to all the survivors fighting to directly unlock the last wave of the Undead. </caption>
+            <tr> <th style="text-align: center;"> Setting </th> <th style="text-align: center;"> Territory </th> <th> </th><th> </th> <th style="text-align: center;"> Town </th> </tr>
+            <tr> <td style="text-align: center;"> West Elizabeth </td> <td style="text-align: center;"> Great Plains </td> <td  style="text-align: center;"> 1 </td> <td style="text-align: center;"> - </td> <td> Blackwater </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> Tall Trees </td> <td  style="text-align: center;"> 2 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Cochinay </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 3 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Manzanita Post </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 4 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Pacific Union Rail Road </td></tr>
+            <tr> <td style="text-align: center;"> New Austin </td> <td style="text-align: center;"> Hennigan's Stead </td> <td  style="text-align: center;"> 5 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Thieves' Landing </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 6 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> MacFarlane's Ranch </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> Cholla Springs </td> <td  style="text-align: center;"> 7 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Armadillo </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 8 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Twin Rocks </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 9 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Ridgewood Farm </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> Gaptooth Ridge </td> <td  style="text-align: center;"> 10 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Rathskeller Fork </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 11 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Gaptooth Breach </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> Rio Bravo </td> <td  style="text-align: center;"> 12 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Plainview </td></tr>
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td> <td style="text-align: center;"> Punta Orgullo </td> <td  style="text-align: center;"> 13 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Nosalida </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 14 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Escalera </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 15 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Tesoro Azul </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> Perdido </td> <td  style="text-align: center;"> 16 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Chuparosa </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 17 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Agave Viejo  </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> Diez Coronas </td> <td  style="text-align: center;"> 18 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> El Matadero  </td></tr>
+            <tr> <td> </td> <td> </td> <td  style="text-align: center;"> 19 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Torquemada  </td></tr>
+            <tr> <td> </td> <td style="text-align: center;"> Perdido </td> <td  style="text-align: center;"> 20 </td> <td> <img src="images/status-unknown-icon.png" width="30px" height="auto"> </td> <td> Las Hermanas </td></tr>
+          </table>
+          <p style="float: right; display: inline;"><img src="images/achievements/spinning-plates.png" width="28px" height="auto"> <b> Spinning Plates </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+          <br>
+          <br>  
+          <hr>
+          <h4 id="strangers2"  style="font-family: 'RDR Lino', sans-serif;"> MISSING PERSONS </h4>
+          <p>  In Undead Nightmare there are 16 missing persons to find, save and bring to a safe zone (kind of similar in concept to Single Player's Bounty hunting side mission). You can find Missing Persons Posters placed on walls inside Fort Mercer in New Austin and El Presidio in Nuevo Paraiso after Story Mission "A Cure For What Ails You". There are 16 missing persons total, and you need to find and rescue all of them for 100% Completion.  </p>
+          <hr>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Missing Persons </h5>     
+          <table class="table-1-1" style="border-collapse: collapse;">   
+            <caption style="font-size: 14px; color: silver; white-space: nowrap;"> Do note that the first Missing Persons, Millicent Waterbury, is saved during the Survivor Mission "Missing Souls". <br> To start the Nuevo Paraiso Missing Persons, you have to visit El Presidio first to get the missing persons posters to spawn. </caption>         
+            <tr> <th style="text-align: center;"> Setting </th> <th> </th> <th> </th> <th> Missing Person </th> <th> </th> <th style="text-align: center;"> Given By </th> <th style="text-align: center;"> Location </th> </tr>
+            <tr> <td style="text-align: center;"> New Austin </td> <td> 1 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Millicent Waterbury </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Pleasance House </td> </tr>
+            <tr> <td> </td> <td> 2 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Mintie Cummings </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Riley's Charge </td> </tr>
+            <tr> <td> </td> <td> 3 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Winona Picket </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Lake Don Julio </td> </tr>
+            <tr> <td> </td> <td> 4 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Grover Boone </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Venter's Place </td> </tr>
+            <tr> <td> </td> <td> 5 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Silas Gaskell </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Critchley's Ranch </td> </tr>
+            <tr> <td> </td> <td> 6 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Willis Lassiter </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Benedict Point </td> </tr>
+            <tr> <td> </td> <td> 7 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Chu Fook </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Gaptooth Breach </td> </tr>
+            <tr> <td> </td> <td> 8 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Orison Pratt </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Ridgewood Farm </td> </tr>
+            <tr> <td> </td> <td> 9 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Willie Oats </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Plainview </td> </tr>
+            <tr> <td> </td> <td> 10 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Adrienne Lachance </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Armadillo </td> </tr>
+            <tr> <td style="text-align: center;"> Nuevo Paraiso </td> <td> 11 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Porfirio Gutierrez </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Roca de Madera </td> </tr>
+            <tr> <td> </td> <td> 12 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Ramon Alvares </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Torquemada </td> </tr>
+            <tr> <td> </td> <td> 13 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Lydia Morales </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Las Hermanas </td> </tr>
+            <tr> <td> </td> <td> 14 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Rafael Carillo </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Agave Viejo </td> </tr>
+            <tr> <td> </td> <td> 15 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Santiago Valenzuela </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> El Matadero </td> </tr>
+            <tr> <td> </td> <td> 16 </td> <td style="text-align: center;"> <img src="images/missing-persons-icon.png" width="30px" height="auto"> </td> <td> Merche Coronado </td> <td> <img src="images/missing-person-poster.png" width="30px" height="auto"> </td> <td style="text-align: center;"> Missing Persons Poster </td> <td style="text-align: center;"> Casa Madrugada </td> </tr>
+          </table>
+      </div>
+    </div>
+
+    <div class="card text-bg-dark mb-3" id="ambientchallenges" style="max-width: 90rem; margin-bottom: 100px; margin-left: auto; margin-right: auto; display: block; margin-top: 2rem; font-style: normal;">
+      <div class="card-body">
+        <div class="card-header">
+          <h3 style="font-family: 'RDR Lino', sans-serif;"> Undead Nightmare - Ambient Challenges </h3>
+        </div>   
+        <p style="padding-top: 15px;"> In Undead Nightmare, similar to Single Player, you can complete different undead ambient challenges to help earn rewards and become a legend of the apocalypse. Different Challenges each have 5 ranks to complete. Completing all 4 Undead Challenges and the Horses of the Apocalypse is required for 100% completion. </p>
+        <hr>
+        <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline; padding-bottom: 15px;"> All Undead Ambient Challenges </h5>         
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <caption style="font-size: 14px; color: silver; white-space: nowrap;"> The "Axe Master" and "Master Exploder" trophies can also be unlocked here as well if you complete the mastery tomahawk and explosive rifle challenges for the first time in Undead Nightmare rather than Single Player. </caption>
+            <tr> <th style="text-align: center;"> 1 </th> <td> <img src="images/undead-hunter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge01"> Undead Hunter </a> </td> <td style="text-align: right; padding-left: 925px;"> <img src="images/achievements/chupathingy.png" width="30px" height="auto"> <b>Chupathingy</b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </td>  </tr>
+            <tr> <th style="text-align: center;"> 2 </th> <td> <img src="images/undead-sharpshooter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge02"> Undead Sharpshooter </a> </td>  </tr>
+            <tr> <th style="text-align: center;"> 4 </th> <td> <img src="images/undead-treasure-hunter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge04"> Undead Treasure Hunter </a> </td>  </tr>
+            <tr> <th style="text-align: center;"> 3 </th> <td> <img src="images/four-horses-of-the-apocalypse-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge03"> Four Horses of the Apocalypse</a> </td>  </tr>
+            <tr> <th style="text-align: center;"> 5 </th> <td> <img src="images/sharpshooter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge05"> Mastery Tomahawk </a> </td> </tr>
+            <tr> <th style="text-align: center;"> 6 </th> <td> <img src="images/sharpshooter-icon.png" width="30px" height="auto"> </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" data-bs-target="#challenge06"> Explosive Rifle Mastery </a> </td> </tr>
+          </table>
+          <hr>
+          <p style="float: right; display: inline;"><img src="images/achievements/mad-marston-the-trail-warrior.png" width="28px" height="auto"> <b> Mad Marston: The Trail Warrior </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+          <br>            
+      </div>
+    </div>    
+
+    <div class="card text-bg-dark mb-3" id="misc2" style="max-width: 90rem; margin-bottom: 100px; margin-left: auto; margin-right: auto; display: block; margin-top: 2rem; font-style: normal;">
+      <div class="card-body">
+        <div class="card-header">
+          <h3 style="font-family: 'RDR Lino', sans-serif;"> Undead Nightmare - Miscellaneous </h3>
+        </div>   
+        <p style="padding-top: 15px;"> In addition to 100% completion for Undead Nightmare, there are also two miscellaneous tasks that mostly would be naturally completed as you complete the story and go for 100% Completion. These miscellaneous tasks are all required for 100% Completion. </p>
+        <hr>
+        <h4  style="font-family: 'RDR Lino', sans-serif;"> UNICORN </h4>
+        <p>  In Undead Nightmare, after reaching Rank 5 in all of the Undead Hunter Challenges and the Four Horses of the Apocalypse Challenges, you can find a Mytical Creature around Torquemada. There is a Unicorn roaming about with rainbow highlights at the tail that you can break and own. Finding and breaking the Mythical Unicorn is needed for 100% Completion.   </p>
+        <p style="float: right; display: inline;"><img src="images/achievements/fan-service.png" width="28px" height="auto"> <b> Fan Service </b> <img src="../images/antman-trophy-bronze.png" width="20px" height="auto"> </p>       
+        <br>          
+        <br>
+        <hr>
+        <h4 style="font-family: 'RDR Lino', sans-serif;"> Outfits </h4>
+        <p> In Undead Nightmare you can wear 11 different outfits to change John's style at a safehouse in a saved town. Some outfits are given automatically or awarded for completing missions, while other outfits must be earned. You can earn outfits by finding and collecting different outfit scraps for that outfit by completing various jobs. Although there are 10 outfits total, you only need to earn 1 specific outfit for 100% Completion (funnily enough, you will naturally earn this outfit as you go towards 100% Completion). This outfit is marked with a colored bar on the left. You can track how many outfits you have discovered and completed via Stats > Misc in the pause menu. </p>
+        <hr>
+          <h5 class="card-title" style="font-family: 'RDR Lino', sans-serif; text-decoration: underline;"> All Outfits </h5>        
+          <table class="table-1-1" style="border-collapse: collapse;">
+            <tr> <td> 1 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit01"> Cowboy Outfit </a> <br> <span style="font-size: 14px; color: silver;"> This is Marston's typical bounty hunter clothing. </span> </td> </tr>
+            <tr> <td> 2 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit02"> Mexican Poncho </a> <br> <span style="font-size: 14px; color: silver;"> A musty old poncho. A souvenir of your travels in Mexico. </span> </td> </tr>
+            <tr> <td> 3 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit03"> Duster Coat </a> <br> <span style="font-size: 14px; color: silver;"> A worn-out old duster. The coat protects your clothing from trail dust, but not much else. </span> </td> </tr>
+            <tr> <td> 4 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit04"> Rancher Clothing </a> <br> <span style="font-size: 14px; color: silver;"> This is Marston's typical clothing when tending the ranch at Beecher's Hope. </span> </td> </tr>
+            <tr> <td> 5 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit05"> US Army Uniform </a> <br> <span style="font-size: 14px; color: silver;"> Look like an enlisted man while wearing this uniform. </span> </td> </tr>
+            <tr style="border-left: solid #85c114;"> <td> 6 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit06"> Undead Hunter </a> <br> <span style="font-size: 14px; color: silver;"> A master undead hunter outfit - comes equipped with a relic that replenishes ammunition and items. </span> </td> </tr>
+            <tr> <td> 7 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit07"> Legend of the Apocalypse </a> <br> <span style="font-size: 14px; color: silver;"> As a Legend of the Apocalypse, your phosphorus treatment lasts longer. </span> </td> </tr>
+            <tr> <td> 8 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit08"> Union Suit </a> <br> <span style="font-size: 14px; color: silver;"> A one-piece long underwear, generally made from flannel. Comes equipped with a button-up front, and a buttoned access hatch in the back for midnight runs to the outhouse. </span> </td> </tr>
+            <tr> <td> 9 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit09"> Undead Cowboy </a> <br> <span style="font-size: 14px; color: silver;"> Ggggrrraarggh. </span> </td> </tr>
+            <tr> <td> 10 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit10"> Legend of the Undead </a> <br> <span style="font-size: 14px; color: silver;"> Nnnrrguuuuuh. </span> </td> </tr>
+            <tr> <td> 11 </td> <td> <a href="#" class="content-link" data-bs-toggle="modal" style="font-weight: bold;" data-bs-target="#outfit11"> Army of the Undead </a> <br> <span style="font-size: 14px; color: silver;"> Rrraaawwnnn. </span> </td> </tr>        
+          </table>
+      </div>
+    </div>
+
 <br style="margin-bottom: 100px;">
 
 </div>
@@ -100,6 +851,28 @@
 <footer>
   Copyright &copy; 2025 navytrademark <br> 
 </footer>  
+
+<div class="modal fade" id="mission01" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="max-width: 90rem; margin-bottom: 100px; margin-left: auto; margin-right: auto; display: block; margin-top: 2rem; font-style: normal; color: #FFFFFF;">
+    <div class="modal-content bg-dark">
+      <div class="modal-body">
+        <div data-bs-theme="dark">
+          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+        </div>
+        <div>
+          <h2 class="RDR-missionHeader-1"> Exodus in America </h2>          
+          <p style="padding-top: 15px;"> <b> <u> Objectives </u> </b> </p>
+          <p class="RDR-Subtitle-1"> <img src="images/yellow-dot-icon.png" width="25px" height="auto"> Go to the <span style="color: #ba9353;">saloon.</span> </p>
+          <p class="RDR-Subtitle-1"> <img src="images/blue-dot-icon.png" width="25px" height="auto"> Follow <span style="color: #4b81a4;">Jake</span> to the horses. </p>
+          <p class="RDR-Subtitle-1"> <img src="images/blue-dot-icon.png" width="25px" height="auto"> Accompany <span style="color: #4b81a4;">Jake</span> to Fort Mercer. </p>
+          <p class="RDR-Subtitle-1"> <img src="images/yellow-dot-icon.png" width="25px" height="auto"> Approach <span style="color: #ba9353;">Fort Mercer.</span> </p>
+          <p> <b><u>Video Walkthrough</u></b> </p>
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/epunAOjqJJ0?si=Cxv_O8ijGedSFQmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   

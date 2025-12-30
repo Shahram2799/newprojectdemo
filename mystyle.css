@@ -1012,3 +1012,73 @@ footer {
   background-position: center;
   filter: blur(5px);
 }
+
+.RDR-Lino {
+  font-family: 'RDR Lino', sans-serif;
+}
+
+#myPieChart3 {
+    width: 170px !important;   
+    height: 170px !important;
+}
+
+.RDR-Subtitle-1 {
+  font-family: 'Mouzambik', sans-serif;
+  font-size: 27px;
+}
+
+.RDR-Subtitle-2 {
+  font-family: 'HapnaSlabSerifW00-DemiBold', sans-serif;
+}
+
+.RDR-Subtitle-3 {
+  font-family: 'RDR Lino', sans-serif;
+}
+
+.RDR-missionHeader-1 {
+  font-family: 'Chinese Rocks Rg', sans-serif;
+  font-size: 3em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #9a0c00;
+  text-align: center;
+}
+
+.RDR-missionHeader-2 {
+  font-family: 'RDR Lino', sans-serif;
+  font-size: 2.5em;
+  -webkit-text-stroke: 0.5px #000000;
+  text-stroke: 0.5px #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.RDR-image {
+  border: 10px solid transparent;
+}
+
+.RDR-image:hover {
+  border-color: #d80419;
+  border-image-repeat: round;
+  border-image-slice: 10 10 10 10 fill;
+  border-image-source: url('mygames/rdr/images/hover.png');
+  border-style: solid;
+  border-width: 10px;
+  cursor: pointer;
+  transform: none !important;
+}
+
+.RDR-Gangs {
+  border: 10px solid transparent;
+}
+
+.RDR-Gangs:hover {
+  border-color: #d80419;
+  border-image-repeat: round;
+  border-image-slice: 10 10 10 10 fill;
+  border-image-source: url('mygames/rdr/images/hover.png');
+  border-style: solid;
+  border-width: 10px;
+  cursor: pointer;
+  transform: none !important;
+}
