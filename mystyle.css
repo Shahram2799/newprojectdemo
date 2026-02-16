@@ -1130,16 +1130,16 @@ footer {
   width: 13px;
   height: 13px;
   transform: rotate(45deg);
-  background: #e6eeee; /* filled diamond */
-  border: 2px solid #cfd9d9; /* outline color */
+  background: #e6eeee; 
+  border: 2px solid #cfd9d9; 
 }
 
 .diamond-4 {
   width: 13px;
   height: 13px;
   transform: rotate(45deg);
-  background: #3b545e; /* filled diamond */
-  border: 1px solid #84a0a5; /* outline color */
+  background: #3b545e; 
+  border: 1px solid #84a0a5; 
 }
 
 .diamond-row, .rectangle-row {
@@ -1159,7 +1159,7 @@ footer {
   width: 50px;
   height: 10px;
   background: transparent;
-  border: 1px solid #a3b4bb; /* outline color */
+  border: 1px solid #a3b4bb;
   transform: skewX(20deg);
 }
 
@@ -1175,8 +1175,98 @@ footer {
   width: 50px;
   height: 10px;
   background: transparent;
-  border: 1px solid #3b4149; /* outline color */
+  border: 1px solid #3b4149; 
   transform: skewX(20deg);
 }
+
+.diamond-5 {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background: #ffffff; 
+  border: 2px solid #ffffff; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level {
+  color: #000000;
+  transform: rotate(-45deg);
+  text-align: center;
+  font-weight: bold;
+}
+
+.cell-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Subtitle-1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.time {
+  display: inline-block; 
+  padding: 4px 8px; 
+  text-align: center; 
+  font-weight: bold; 
+  border-bottom: 3px solid #831203; 
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 0.3px #000000;
+  text-stroke: 0.3px #000000;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.extras-link {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.AC-image {
+  border: 3px solid transparent;
+}
+
+.AC-image:hover {
+  border-color: #ad0000;
+  border-style: solid;
+  border-width: 3px;
+  cursor: pointer;
+  transform: none !important;
+}
+
+.line-cell {
+  text-align: center;
+  padding: 10px;
+}
+
+.connected {
+  height: 20px; /* length of vertical line */
+  position: relative;
+}
+
+.connected::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #4d5154;
+  transform: translateX(-50%);
+}
+
+
+
+
+
 
 
